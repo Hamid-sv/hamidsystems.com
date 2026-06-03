@@ -1,33 +1,39 @@
-# Hamid Systems Portfolio Site
+# Hamid Systems
 
-This is a static portfolio site for `hamidsystems.com`. It has no build step.
+Personal portfolio website for Hamid Systems, focused on practical software, automation, and AI-assisted workflow projects.
 
-## Files
+Live site: [hamidsystems.com](https://hamidsystems.com)
 
-- `index.html` - main page content
-- `styles.css` - layout, colors, responsive behavior
-- `script.js` - theme toggle, copy-link behavior, icons
-- `assets/hero-workspace.png` - generated hero image
-- `CNAME` - GitHub Pages custom-domain file
-- `DOMAIN_FIX.md` - DNS recovery and deployment checklist
+## Overview
 
-## Quick Local Preview
+This site is a lightweight static portfolio built with HTML, CSS, and vanilla JavaScript. It highlights selected work, the way I approach building useful tools, and links back to my GitHub profile.
 
-Open `index.html` in a browser, or run a tiny local server from this folder:
+## Features
+
+- Responsive single-page layout
+- Dark and light theme toggle
+- Project-focused homepage sections
+- GitHub Pages deployment with a custom domain
+
+## Tech Stack
+
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages
+
+## Local Preview
 
 ```powershell
 python -m http.server 8080
 ```
 
-Then open:
+Then open `http://localhost:8080`.
 
-```text
-http://localhost:8080
-```
+## Project Structure
 
-## Edit Checklist
-
-- Add a real email address after mail hosting or forwarding is set up for `hamidsystems.com`.
-- Replace the three project cards with your real projects and links.
-- Add a `resume.pdf` link if you want a resume button.
-- Upload the whole folder to your static host.
+- `index.html` - page content and structure
+- `styles.css` - visual design, layout, and responsive styles
+- `script.js` - theme toggle, contact link copying, and icons
+- `assets/` - visual assets used by the homepage
+- `CNAME` - custom domain configuration for GitHub Pages
