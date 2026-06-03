@@ -2,8 +2,8 @@
   const root = document.documentElement;
   const header = document.querySelector("[data-header]");
   const themeToggle = document.getElementById("theme-toggle");
-  const copyEmail = document.getElementById("copy-email");
-  const email = "hello@hamidsystems.com";
+  const copyContact = document.getElementById("copy-contact");
+  const contactUrl = "https://github.com/Hamid-sv";
 
   function renderIcons() {
     if (window.lucide) {
@@ -34,15 +34,15 @@
     setTheme(root.dataset.theme === "dark" ? "light" : "dark");
   });
 
-  copyEmail?.addEventListener("click", async function () {
+  copyContact?.addEventListener("click", async function () {
     try {
-      await navigator.clipboard.writeText(email);
-      copyEmail.querySelector("span").textContent = "Copied";
+      await navigator.clipboard.writeText(contactUrl);
+      copyContact.querySelector("span").textContent = "Copied";
       window.setTimeout(function () {
-        copyEmail.querySelector("span").textContent = "Copy Email";
+        copyContact.querySelector("span").textContent = "Copy Link";
       }, 1300);
     } catch (_error) {
-      window.location.href = "mailto:" + email;
+      window.location.href = contactUrl;
     }
   });
 

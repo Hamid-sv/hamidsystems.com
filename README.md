@@ -6,7 +6,7 @@ This is a static portfolio site for `hamidsystems.com`. It has no build step.
 
 - `index.html` - main page content
 - `styles.css` - layout, colors, responsive behavior
-- `script.js` - theme toggle, copy-email behavior, icons
+- `script.js` - theme toggle, copy-link behavior, icons
 - `assets/hero-workspace.png` - generated hero image
 - `CNAME` - GitHub Pages custom-domain file
 - `DOMAIN_FIX.md` - DNS recovery and deployment checklist
@@ -27,7 +27,7 @@ http://localhost:8080
 
 ## Edit Checklist
 
-- Replace `hello@hamidsystems.com` in `index.html` and `script.js` if your domain email is not active.
+- Add a real email address after mail hosting or forwarding is set up for `hamidsystems.com`.
 - Replace the three project cards with your real projects and links.
 - Add a `resume.pdf` link if you want a resume button.
 - Upload the whole folder to your static host.
