@@ -5,114 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Hamid Systems portfolio: automation, data tools, web interfaces, and practical systems work."
+      content="Hamid Systems is a portfolio for software, automation, dashboards, and practical web tools built by Hamid."
     />
-    <title>Hamid Systems | Portfolio</title>
+    <meta property="og:title" content="Hamid Systems" />
+    <meta
+      property="og:description"
+      content="Software, automation, dashboards, and practical web tools."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hamidsystems.com/" />
+    <meta property="og:image" content="https://hamidsystems.com/assets/hero-workspace.png" />
+    <title>Hamid Systems | Software, Automation, and Web Tools</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preload" href="assets/hero-workspace.png" as="image" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="Hamid Systems home">
+      <a class="brand" href="index.html" aria-label="Hamid Systems home">
         <span class="brand-mark">HS</span>
         <span>Hamid Systems</span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
-      <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
-        <i data-lucide="moon"></i>
-      </button>
+      <div class="header-actions">
+        <button class="icon-button menu-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+          <i data-lucide="menu"></i>
+        </button>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <i data-lucide="moon"></i>
+        </button>
+      </div>
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
+      <section class="hero hero-home" aria-labelledby="hero-title">
         <div class="hero-media" aria-hidden="true">
           <img src="assets/hero-workspace.png" alt="" />
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-inner">
-          <p class="eyebrow">Automation | Data | Web Systems</p>
+          <p class="eyebrow">Software | Automation | Data Tools</p>
           <h1 id="hero-title">Hamid Systems</h1>
           <p class="hero-copy">
-            I build practical software that turns messy workflows into clean, reliable tools: dashboards,
-            automations, research utilities, and web interfaces that are easy to operate.
+            I build practical software for the parts of work that need structure: automations, dashboards,
+            research tools, and web interfaces that are clear enough to use every day.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#projects">
+            <a class="button button-primary" href="projects.html">
               <i data-lucide="folder-kanban"></i>
               <span>View Projects</span>
             </a>
-            <a class="button button-secondary" href="#contact">
+            <a class="button button-secondary" href="contact.html">
               <i data-lucide="send"></i>
-              <span>Get In Touch</span>
+              <span>Contact Me</span>
             </a>
+          </div>
+          <div class="hero-facts" aria-label="Portfolio focus areas">
+            <div>
+              <span>01</span>
+              <strong>Automation</strong>
+              <small>Repeatable scripts and small internal tools.</small>
+            </div>
+            <div>
+              <span>02</span>
+              <strong>Dashboards</strong>
+              <small>Readable views for metrics, results, and status.</small>
+            </div>
+            <div>
+              <span>03</span>
+              <strong>Web</strong>
+              <small>Fast static sites and focused user interfaces.</small>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section intro" aria-label="Portfolio summary">
+      <section class="section intro" aria-labelledby="intro-title">
         <div class="section-heading">
-          <p class="eyebrow">What I Do</p>
-          <h2>Focused systems for real work.</h2>
+          <p class="eyebrow">What I Build</p>
+          <h2 id="intro-title">Small systems with a clear job.</h2>
         </div>
         <div class="summary-grid">
           <article class="summary-item">
             <i data-lucide="workflow"></i>
-            <h3>Automation</h3>
-            <p>Scripts and small apps that remove repetitive steps from reporting, tracking, and operations.</p>
+            <h3>Workflow Automation</h3>
+            <p>Tools that take repeated manual steps and turn them into something trackable, reusable, and easier to review.</p>
           </article>
           <article class="summary-item">
             <i data-lucide="chart-no-axes-combined"></i>
-            <h3>Data Tools</h3>
-            <p>Dashboards, pipelines, and evaluation notes that make results easier to inspect and trust.</p>
+            <h3>Data Utilities</h3>
+            <p>Dashboards, scoring views, and status checks that make results easier to inspect before decisions get made.</p>
           </article>
           <article class="summary-item">
             <i data-lucide="monitor-smartphone"></i>
             <h3>Web Interfaces</h3>
-            <p>Fast, responsive pages and tools with clear layouts, direct calls to action, and low maintenance.</p>
+            <p>Responsive pages and lightweight tools that load fast, stay simple, and do not need much maintenance.</p>
           </article>
         </div>
       </section>
 
-      <section class="section projects-band" id="projects" aria-labelledby="projects-title">
+      <section class="section feature-band" aria-labelledby="featured-title">
         <div class="section-heading">
           <p class="eyebrow">Selected Work</p>
-          <h2 id="projects-title">Projects worth talking about.</h2>
+          <h2 id="featured-title">Projects I can talk through.</h2>
         </div>
-
         <div class="project-grid">
           <article class="project-card">
             <div class="project-meta">
-              <span>Automation</span>
-              <span>Case Study</span>
+              <span>Web</span>
+              <span>Live</span>
             </div>
-            <h3>Operations Automation Kit</h3>
-            <p>
-              A collection of repeatable scripts and small interfaces for turning manual admin work into
-              trackable, reviewable workflows.
-            </p>
+            <h3>Hamid Systems Website</h3>
+            <p>A multi-page portfolio with a custom domain, responsive layout, theme support, and clean GitHub Pages deployment.</p>
             <ul class="tag-list" aria-label="Project tags">
-              <li>PowerShell</li>
-              <li>Dashboards</li>
-              <li>Reporting</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
             </ul>
           </article>
 
           <article class="project-card featured">
             <div class="project-meta">
-              <span>Research</span>
-              <span>Private Build</span>
+              <span>Data</span>
+              <span>Private</span>
             </div>
-            <h3>Model Evaluation Dashboard</h3>
-            <p>
-              A research-focused workspace for checking model outputs, recent performance, and evidence before
-              making decisions.
-            </p>
+            <h3>Model Review Dashboard</h3>
+            <p>A research workspace for checking recent results, comparing buckets, and keeping notes tied to the evidence.</p>
             <ul class="tag-list" aria-label="Project tags">
               <li>Python</li>
               <li>Metrics</li>
@@ -122,76 +147,77 @@
 
           <article class="project-card">
             <div class="project-meta">
-              <span>Web</span>
-              <span>Portfolio</span>
+              <span>Automation</span>
+              <span>Toolkit</span>
             </div>
-            <h3>Hamid Systems Website</h3>
-            <p>
-              A static, custom-domain-ready portfolio designed to be easy to deploy, edit, and keep online without
-              a paid workspace subscription.
-            </p>
+            <h3>Operations Scripts</h3>
+            <p>A set of small scripts and command-line helpers for repetitive admin, reporting, and file workflow tasks.</p>
             <ul class="tag-list" aria-label="Project tags">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>GitHub Pages</li>
+              <li>PowerShell</li>
+              <li>CLI</li>
+              <li>Reporting</li>
             </ul>
           </article>
         </div>
+        <div class="section-action">
+          <a class="text-link" href="projects.html">
+            See the project page
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
       </section>
 
-      <section class="section process" id="process" aria-labelledby="process-title">
+      <section class="section process" aria-labelledby="process-title">
         <div class="section-heading">
-          <p class="eyebrow">Approach</p>
-          <h2 id="process-title">I like tools that are clear under pressure.</h2>
+          <p class="eyebrow">How I Work</p>
+          <h2 id="process-title">Keep the useful part obvious.</h2>
         </div>
 
         <div class="process-grid">
           <div class="process-step">
             <span>01</span>
             <h3>Map the workflow</h3>
-            <p>Find the repeated decisions, handoffs, and failure points before writing code.</p>
+            <p>Find the repeated decisions, handoffs, and weak spots before deciding what to build.</p>
           </div>
           <div class="process-step">
             <span>02</span>
-            <h3>Build the smallest useful tool</h3>
-            <p>Ship the useful core first, then add polish where it makes daily use easier.</p>
+            <h3>Build the core</h3>
+            <p>Start with the smallest version that saves time or makes the next decision clearer.</p>
           </div>
           <div class="process-step">
             <span>03</span>
-            <h3>Make it easy to operate</h3>
-            <p>Keep commands, dashboards, and status checks obvious enough to run without drama.</p>
+            <h3>Make it operable</h3>
+            <p>Use plain status, simple controls, and clear outputs so the tool is easy to run again.</p>
           </div>
         </div>
       </section>
 
-      <section class="section contact" id="contact" aria-labelledby="contact-title">
-        <div class="contact-panel">
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h2 id="contact-title">Let us build something useful.</h2>
-            <p>
-              For project walkthroughs, code samples, collaborations, or quick intros, start with the GitHub
-              profile below.
-            </p>
-          </div>
-
-          <div class="contact-actions">
-            <a class="button button-primary" href="https://github.com/Hamid-sv" target="_blank" rel="noreferrer">
-              <i data-lucide="github"></i>
-              <span>View GitHub</span>
-            </a>
-            <button class="button button-secondary" type="button" id="copy-contact">
-              <i data-lucide="copy"></i>
-              <span>Copy Link</span>
-            </button>
-          </div>
+      <section class="section contact-strip" aria-labelledby="contact-strip-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-strip-title">Have a project or role in mind?</h2>
+          <p>Send a note, share a repo, or ask for a walkthrough of the work on this site.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:hamidsamadivaghefi@gmail.com?subject=Hamid%20Systems%20Contact">
+            <i data-lucide="mail"></i>
+            <span>Email Me</span>
+          </a>
+          <a class="button button-secondary" href="https://github.com/Hamid-sv" target="_blank" rel="noreferrer">
+            <i data-lucide="github"></i>
+            <span>GitHub</span>
+          </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> Hamid Systems. Built for fast static hosting.</p>
-      <a href="#top">Back to top</a>
+      <p>&copy; <span id="year"></span> Hamid Systems.</p>
+      <div>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </footer>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>

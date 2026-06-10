@@ -2,8 +2,8 @@
   const root = document.documentElement;
   const header = document.querySelector("[data-header]");
   const themeToggle = document.getElementById("theme-toggle");
-  const copyContact = document.getElementById("copy-contact");
-  const contactUrl = "https://github.com/Hamid-sv";
+  const menuToggle = document.getElementById("menu-toggle");
+  const primaryNav = document.getElementById("primary-nav");
 
   function renderIcons() {
     if (window.lucide) {
@@ -21,6 +21,14 @@
     }
   }
 
+  function setMenu(open) {
+    if (!menuToggle || !primaryNav) return;
+    primaryNav.classList.toggle("is-open", open);
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.innerHTML = open ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
+    renderIcons();
+  }
+
   function handleHeaderShadow() {
     if (!header) return;
     header.classList.toggle("is-scrolled", window.scrollY > 12);
@@ -34,20 +42,45 @@
     setTheme(root.dataset.theme === "dark" ? "light" : "dark");
   });
 
-  copyContact?.addEventListener("click", async function () {
-    try {
-      await navigator.clipboard.writeText(contactUrl);
-      copyContact.querySelector("span").textContent = "Copied";
-      window.setTimeout(function () {
-        copyContact.querySelector("span").textContent = "Copy Link";
-      }, 1300);
-    } catch (_error) {
-      window.location.href = contactUrl;
+  menuToggle?.addEventListener("click", function () {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    setMenu(!isOpen);
+  });
+
+  primaryNav?.addEventListener("click", function (event) {
+    if (event.target instanceof HTMLAnchorElement) {
+      setMenu(false);
     }
   });
 
-  document.getElementById("year").textContent = new Date().getFullYear();
+  document.querySelectorAll("[data-copy-value]").forEach(function (button) {
+    const label = button.getAttribute("data-copy-label") || "Copy";
+    button.addEventListener("click", async function () {
+      const value = button.getAttribute("data-copy-value") || "";
+      const span = button.querySelector("span");
+      try {
+        await navigator.clipboard.writeText(value);
+        if (span) span.textContent = "Copied";
+        window.setTimeout(function () {
+          if (span) span.textContent = label;
+        }, 1300);
+      } catch (_error) {
+        window.location.href = value.startsWith("http") ? value : "mailto:" + value;
+      }
+    });
+  });
+
+  const year = document.getElementById("year");
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
   window.addEventListener("scroll", handleHeaderShadow, { passive: true });
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 900) {
+      setMenu(false);
+    }
+  });
   window.addEventListener("load", renderIcons);
   handleHeaderShadow();
 })();

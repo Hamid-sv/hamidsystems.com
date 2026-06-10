@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Contact Hamid Systems for project walkthroughs, software work, automation, and web tools."
+    />
+    <meta property="og:title" content="Contact | Hamid Systems" />
+    <meta property="og:description" content="Contact Hamid Systems by email or GitHub." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hamidsystems.com/contact.html" />
+    <title>Contact | Hamid Systems</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Hamid Systems home">
+        <span class="brand-mark">HS</span>
+        <span>Hamid Systems</span>
+      </a>
+
+      <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button menu-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+          <i data-lucide="menu"></i>
+        </button>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <i data-lucide="moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="page-hero contact-hero" aria-labelledby="contact-title">
+        <p class="eyebrow">Contact</p>
+        <h1 id="contact-title">Let's talk through the work.</h1>
+        <p>
+          Reach out for project walkthroughs, resume context, collaboration, or a quick intro.
+        </p>
+      </section>
+
+      <section class="section contact-page" aria-label="Contact options">
+        <div class="contact-card">
+          <i data-lucide="mail"></i>
+          <h2>Email</h2>
+          <p>The best way to reach me for projects, roles, or walkthroughs.</p>
+          <a class="contact-value" href="mailto:hamidsamadivaghefi@gmail.com?subject=Hamid%20Systems%20Contact">
+            hamidsamadivaghefi@gmail.com
+          </a>
+          <button class="button button-secondary" type="button" data-copy-value="hamidsamadivaghefi@gmail.com" data-copy-label="Copy Email">
+            <i data-lucide="copy"></i>
+            <span>Copy Email</span>
+          </button>
+        </div>
+
+        <div class="contact-card">
+          <i data-lucide="github"></i>
+          <h2>GitHub</h2>
+          <p>See public code, site updates, and the portfolio repository.</p>
+          <a class="contact-value" href="https://github.com/Hamid-sv" target="_blank" rel="noreferrer">
+            github.com/Hamid-sv
+          </a>
+          <button class="button button-secondary" type="button" data-copy-value="https://github.com/Hamid-sv" data-copy-label="Copy GitHub">
+            <i data-lucide="copy"></i>
+            <span>Copy GitHub</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Hamid Systems.</p>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

@@ -1,19 +1,19 @@
 # Hamid Systems
 
-Personal portfolio website for Hamid Systems, focused on practical software, automation, and AI-assisted workflow projects.
+Personal portfolio website for Hamid Systems.
 
 Live site: [hamidsystems.com](https://hamidsystems.com)
 
 ## Overview
 
-This site is a lightweight static portfolio built with HTML, CSS, and vanilla JavaScript. It highlights selected work, the way I approach building useful tools, and links back to my GitHub profile.
+This repository contains the static front end for my portfolio site. It is built with plain HTML, CSS, and JavaScript, then published with GitHub Pages on a custom domain.
 
-## Features
+The site includes:
 
-- Responsive single-page layout
-- Dark and light theme toggle
-- Project-focused homepage sections
-- GitHub Pages deployment with a custom domain
+- A homepage for the main portfolio pitch
+- A projects page for selected work
+- An about page for background and working style
+- A contact page with email and GitHub links
 
 ## Tech Stack
 
@@ -30,10 +30,13 @@ python -m http.server 8080
 
 Then open `http://localhost:8080`.
 
-## Project Structure
+## Structure
 
-- `index.html` - page content and structure
-- `styles.css` - visual design, layout, and responsive styles
-- `script.js` - theme toggle, contact link copying, and icons
-- `assets/` - visual assets used by the homepage
-- `CNAME` - custom domain configuration for GitHub Pages
+- `index.html` - homepage
+- `projects.html` - selected project details
+- `about.html` - background and approach
+- `contact.html` - contact links
+- `styles.css` - shared site styles
+- `script.js` - theme, navigation, and copy actions
+- `assets/` - visual assets
+- `CNAME` - custom domain configuration

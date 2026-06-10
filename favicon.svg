@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Hamid Systems">
+  <rect width="64" height="64" rx="12" fill="#111715"/>
+  <path d="M16 42V22h6v7h20v-7h6v20h-6v-8H22v8h-6Z" fill="#f6f8f5"/>
+  <path d="M18 48h28" stroke="#42bdb5" stroke-width="4" stroke-linecap="round"/>
+</svg>

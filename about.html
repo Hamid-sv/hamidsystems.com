@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="About Hamid Systems: practical software, automation, dashboards, and web tooling."
+    />
+    <meta property="og:title" content="About | Hamid Systems" />
+    <meta property="og:description" content="About the work and approach behind Hamid Systems." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hamidsystems.com/about.html" />
+    <title>About | Hamid Systems</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Hamid Systems home">
+        <span class="brand-mark">HS</span>
+        <span>Hamid Systems</span>
+      </a>
+
+      <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button menu-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+          <i data-lucide="menu"></i>
+        </button>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <i data-lucide="moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="page-hero" aria-labelledby="about-title">
+        <p class="eyebrow">About</p>
+        <h1 id="about-title">I like software that earns its place.</h1>
+        <p>
+          Hamid Systems is where I collect the tools, interfaces, and experiments I build around automation,
+          data review, and practical web work.
+        </p>
+      </section>
+
+      <section class="section about-layout" aria-label="About Hamid Systems">
+        <div class="about-copy">
+          <p class="lead">
+            I focus on tools that solve a clear problem: reduce repeated work, make information easier to check,
+            or turn a messy workflow into something that can be run again without confusion.
+          </p>
+          <p>
+            My work usually sits between software and operations. That means scripts, dashboards, review utilities,
+            static websites, and small interfaces that help people understand what is happening and what to do next.
+          </p>
+          <p>
+            I care about straightforward systems: readable code, clear status, simple deployment, and pages that do
+            not make people hunt for the important part.
+          </p>
+        </div>
+
+        <aside class="profile-panel" aria-label="Profile summary">
+          <div>
+            <span>Focus</span>
+            <strong>Automation, dashboards, and web tools</strong>
+          </div>
+          <div>
+            <span>Style</span>
+            <strong>Practical, direct, easy to operate</strong>
+          </div>
+          <div>
+            <span>Based around</span>
+            <strong>Projects, code, and working demos</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section values-band" aria-labelledby="values-title">
+        <div class="section-heading">
+          <p class="eyebrow">Principles</p>
+          <h2 id="values-title">The details I keep coming back to.</h2>
+        </div>
+        <div class="summary-grid">
+          <article class="summary-item">
+            <i data-lucide="scan-search"></i>
+            <h3>Make it inspectable</h3>
+            <p>Good tools make it easy to see what changed, what failed, and what the next step should be.</p>
+          </article>
+          <article class="summary-item">
+            <i data-lucide="gauge"></i>
+            <h3>Keep it lightweight</h3>
+            <p>Use the simplest setup that can do the job reliably, then add complexity only when it pays for itself.</p>
+          </article>
+          <article class="summary-item">
+            <i data-lucide="layout-dashboard"></i>
+            <h3>Design for repeat use</h3>
+            <p>The interface should still make sense the tenth time, when the user just wants to get the work done.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Hamid Systems.</p>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
