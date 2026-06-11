@@ -179,6 +179,7 @@ textarea {
   min-height: 88vh;
   display: grid;
   align-items: center;
+  justify-items: center;
   overflow: hidden;
   padding: 118px clamp(18px, 4vw, 56px) 64px;
 }
@@ -211,7 +212,7 @@ textarea {
 .hero-inner {
   position: relative;
   z-index: 2;
-  width: min(760px, 100%);
+  width: min(var(--max), 100%);
   min-width: 0;
 }
 
@@ -794,10 +795,11 @@ h3 {
 
   .hero {
     padding-top: 104px;
+    justify-items: start;
   }
 
   .hero-inner {
-    width: min(100%, 340px);
+    width: 100%;
   }
 
   h1 {
