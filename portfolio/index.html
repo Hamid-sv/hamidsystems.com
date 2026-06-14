@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Technical portfolio for Hamid Systems: web interfaces, automation scripts, dashboards, and workflow tools."
+    />
+    <meta property="og:title" content="Portfolio | Hamid Systems" />
+    <meta property="og:description" content="Technical proof behind Hamid Systems lead recovery work." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hamidsystems.com/portfolio/" />
+    <title>Portfolio | Hamid Systems</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="Hamid Systems home">
+        <span class="brand-mark">HS</span>
+        <span>Hamid Systems</span>
+      </a>
+
+      <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/free-audit/">Free Audit</a>
+        <a href="/portfolio/" aria-current="page">Portfolio</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button menu-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+          <i data-lucide="menu"></i>
+        </button>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <i data-lucide="moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="page-hero" aria-labelledby="portfolio-title">
+        <p class="eyebrow">Portfolio</p>
+        <h1 id="portfolio-title">Technical proof behind the business systems.</h1>
+        <p>
+          These projects show the foundation behind the systems I build: web interfaces, dashboards, automation,
+          deployment, and practical workflow tools.
+        </p>
+      </section>
+
+      <section class="section project-list" aria-label="Technical portfolio">
+        <article class="project-detail">
+          <div class="project-detail-main">
+            <div class="project-meta">
+              <span>Web</span>
+              <span>Live</span>
+            </div>
+            <h2>Hamid Systems Website</h2>
+            <p>
+              A custom-domain static website with responsive layout, theme support, business positioning, clear calls to action,
+              and GitHub Pages deployment.
+            </p>
+            <ul class="tag-list" aria-label="Project tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>GitHub Pages</li>
+            </ul>
+          </div>
+          <div class="project-detail-side">
+            <a class="button button-primary" href="https://hamidsystems.com" target="_blank" rel="noreferrer">
+              <i data-lucide="external-link"></i>
+              <span>Open Site</span>
+            </a>
+            <a class="button button-secondary" href="https://github.com/Hamid-sv/hamidsystems.com" target="_blank" rel="noreferrer">
+              <i data-lucide="github"></i>
+              <span>View Repo</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-detail">
+          <div class="project-detail-main">
+            <div class="project-meta">
+              <span>Automation</span>
+              <span>Private Toolkit</span>
+            </div>
+            <h2>Operations Scripts</h2>
+            <p>
+              Command-line helpers for repetitive admin, reporting, file workflow, and status-check tasks. The same thinking
+              carries into client systems: reduce manual steps and leave a clear trail.
+            </p>
+            <ul class="tag-list" aria-label="Project tags">
+              <li>PowerShell</li>
+              <li>CLI</li>
+              <li>Reporting</li>
+              <li>Workflow</li>
+            </ul>
+          </div>
+          <div class="project-detail-side note-block">
+            <strong>Useful for clients</strong>
+            <p>Repeatable workflows, clear outputs, and fewer steps for routine operations.</p>
+          </div>
+        </article>
+
+        <article class="project-detail">
+          <div class="project-detail-main">
+            <div class="project-meta">
+              <span>Data Tools</span>
+              <span>Research</span>
+            </div>
+            <h2>Model Review Dashboard</h2>
+            <p>
+              A review workspace for comparing recent outputs, checking performance windows, and keeping evidence tied
+              to decision-making instead of scattered across files.
+            </p>
+            <ul class="tag-list" aria-label="Project tags">
+              <li>Python</li>
+              <li>Metrics</li>
+              <li>Dashboards</li>
+              <li>Review Loops</li>
+            </ul>
+          </div>
+          <div class="project-detail-side note-block">
+            <strong>Useful for clients</strong>
+            <p>Readable dashboards that make next steps easier to inspect.</p>
+          </div>
+        </article>
+
+        <article class="project-detail">
+          <div class="project-detail-main">
+            <div class="project-meta">
+              <span>Interface</span>
+              <span>Ongoing</span>
+            </div>
+            <h2>Dashboard and UI Experiments</h2>
+            <p>
+              Interface work around dense information: clearer layouts, fewer distractions, and controls that stay
+              understandable when customer data changes.
+            </p>
+            <ul class="tag-list" aria-label="Project tags">
+              <li>UI</li>
+              <li>Responsive Design</li>
+              <li>Data Views</li>
+            </ul>
+          </div>
+          <div class="project-detail-side note-block">
+            <strong>Useful for clients</strong>
+            <p>Busy workflows become easier to scan and act on.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Hamid Systems / Samadi Systems. Lead Recovery Automation for Local Service Businesses.</p>
+      <div>
+        <a href="/services/">Services</a>
+        <a href="/free-audit/">Free Audit</a>
+        <a href="/portfolio/">Portfolio</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="/script.js" defer></script>
+  </body>
+</html>

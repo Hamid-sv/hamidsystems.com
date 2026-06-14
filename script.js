@@ -70,6 +70,26 @@
     });
   });
 
+  document.querySelector("[data-audit-form]")?.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const body = Array.from(formData.entries())
+      .map(function ([key, value]) {
+        return key + ": " + value;
+      })
+      .join("\n");
+    const subject = "Free Lead Audit Request";
+    const href = "mailto:hamidsamadivaghefi@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    const status = form.querySelector("[data-form-status]");
+
+    if (status) {
+      status.textContent = "Opening your email app with the audit details filled in.";
+    }
+    window.location.href = href;
+  });
+
   const year = document.getElementById("year");
   if (year) {
     year.textContent = new Date().getFullYear();
