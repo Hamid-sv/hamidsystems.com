@@ -167,6 +167,7 @@ textarea {
 .icon-button svg,
 .button svg,
 .summary-item svg,
+.feature-card svg,
 .contact-card > svg,
 .text-link svg {
   width: 19px;
@@ -268,6 +269,23 @@ h3 {
   color: color-mix(in srgb, var(--ink) 72%, var(--muted));
 }
 
+.hero-business h1 {
+  max-width: 980px;
+  font-size: clamp(3rem, 5.8vw, 5.5rem);
+}
+
+.hero-business .hero-copy {
+  max-width: 860px;
+}
+
+.hero-trust {
+  max-width: 760px;
+  margin: 18px 0 0;
+  color: color-mix(in srgb, var(--ink) 78%, var(--muted));
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 .hero-actions,
 .contact-actions {
   gap: 12px;
@@ -317,6 +335,10 @@ h3 {
   gap: 12px;
   width: min(720px, 100%);
   margin-top: 34px;
+}
+
+.hero-business .hero-facts {
+  width: min(920px, 100%);
 }
 
 .hero-facts div {
@@ -388,6 +410,10 @@ h3 {
 
 .section-heading,
 .summary-grid,
+.insight-grid,
+.audience-grid,
+.feature-grid,
+.system-layout,
 .project-grid,
 .process-grid,
 .contact-strip,
@@ -407,11 +433,25 @@ h3 {
   max-width: 720px;
 }
 
+.section-heading-wide h2,
+.section-heading-wide .section-subtitle {
+  max-width: 980px;
+}
+
+.section-subtitle {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.02rem, 2vw, 1.18rem);
+}
+
 .intro {
   padding-top: 52px;
 }
 
 .summary-grid,
+.insight-grid,
+.audience-grid,
+.feature-grid,
 .project-grid,
 .process-grid,
 .contact-page {
@@ -420,12 +460,22 @@ h3 {
 }
 
 .summary-grid,
+.insight-grid,
 .project-grid,
 .process-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.audience-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.feature-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .summary-item,
+.feature-card,
 .project-card,
 .process-step,
 .project-detail,
@@ -439,6 +489,7 @@ h3 {
 }
 
 .summary-item,
+.feature-card,
 .project-card,
 .process-step,
 .project-detail,
@@ -456,13 +507,20 @@ h3 {
   padding: 28px;
 }
 
+.feature-card {
+  min-height: 220px;
+  padding: 24px;
+}
+
 .summary-item svg,
+.feature-card svg,
 .contact-card > svg {
   color: var(--rust);
   margin-bottom: 20px;
 }
 
 .summary-item p,
+.feature-card p,
 .project-card p,
 .process-step p,
 .contact-strip p,
@@ -475,6 +533,53 @@ h3 {
 .feature-band,
 .values-band {
   background: var(--surface);
+}
+
+.problem-section {
+  padding-top: clamp(58px, 8vw, 86px);
+}
+
+.solution-section {
+  border-block: 1px solid var(--line);
+}
+
+.system-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+  gap: clamp(28px, 6vw, 78px);
+  align-items: start;
+}
+
+.system-copy {
+  max-width: 720px;
+}
+
+.system-copy p {
+  color: var(--muted);
+}
+
+.system-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.system-list span {
+  min-height: 58px;
+  padding: 14px 15px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: color-mix(in srgb, var(--ink) 86%, var(--muted));
+  font-weight: 740;
+}
+
+.feature-card h3 {
+  margin-top: 8px;
+}
+
+.feature-card p {
+  margin: 14px 0 0;
 }
 
 .project-card {
@@ -539,6 +644,10 @@ h3 {
 .process-step {
   min-height: 240px;
   padding: 28px;
+}
+
+.process-grid-six .process-step {
+  min-height: 260px;
 }
 
 .process-step span {
@@ -709,6 +818,13 @@ h3 {
   font-weight: 740;
 }
 
+@media (max-width: 1100px) {
+  .audience-grid,
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 900px) {
   .site-header {
     gap: 12px;
@@ -766,14 +882,22 @@ h3 {
   .section-heading,
   .contact-strip,
   .project-detail,
+  .system-layout,
   .about-layout {
     grid-template-columns: 1fr;
   }
 
   .summary-grid,
+  .insight-grid,
+  .audience-grid,
+  .feature-grid,
   .project-grid,
   .process-grid,
   .contact-page {
+    grid-template-columns: 1fr;
+  }
+
+  .system-list {
     grid-template-columns: 1fr;
   }
 
@@ -807,6 +931,29 @@ h3 {
     font-size: clamp(2.9rem, 15vw, 4rem);
   }
 
+  .hero-business h1 {
+    max-width: 100%;
+    font-size: clamp(2.35rem, 11.5vw, 3.25rem);
+  }
+
+  .hero-business .eyebrow {
+    max-width: 330px;
+    font-size: 0.72rem;
+    overflow-wrap: break-word;
+  }
+
+  .hero-business .hero-copy,
+  .hero-trust {
+    width: min(100%, 330px);
+    max-width: 100%;
+    font-size: 1.02rem;
+  }
+
+  .hero-business .hero-actions,
+  .hero-business .hero-facts {
+    width: min(100%, 330px);
+  }
+
   .page-hero .eyebrow,
   .page-hero h1,
   .page-hero p {
@@ -835,6 +982,7 @@ h3 {
 
   .project-card,
   .summary-item,
+  .feature-card,
   .process-step,
   .contact-card {
     min-height: auto;
