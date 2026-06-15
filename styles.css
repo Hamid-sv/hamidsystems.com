@@ -270,12 +270,12 @@ h3 {
 }
 
 .hero-business h1 {
-  max-width: 980px;
-  font-size: clamp(3rem, 5.8vw, 5.5rem);
+  max-width: 900px;
+  font-size: clamp(3rem, 5.4vw, 5.1rem);
 }
 
 .hero-business .hero-copy {
-  max-width: 860px;
+  max-width: 760px;
 }
 
 .hero-trust {
@@ -509,6 +509,23 @@ h3 {
 
 .feature-card {
   min-height: 220px;
+  padding: 24px;
+}
+
+.compact-grid .summary-item,
+.service-grid .feature-card {
+  min-height: auto;
+}
+
+.compact-grid .summary-item {
+  padding: 24px;
+}
+
+.compact-grid .summary-item svg {
+  margin-bottom: 16px;
+}
+
+.service-grid .feature-card {
   padding: 24px;
 }
 
@@ -1023,8 +1040,9 @@ h3 {
   }
 
   .hero-business h1 {
-    max-width: 100%;
-    font-size: clamp(2.35rem, 11.5vw, 3.25rem);
+    max-width: 340px;
+    font-size: clamp(2.25rem, 9.6vw, 2.9rem);
+    line-height: 1.08;
   }
 
   .hero-business .eyebrow {

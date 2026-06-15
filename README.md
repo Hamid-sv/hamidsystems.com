@@ -11,7 +11,7 @@ This repository contains the static front end for a local business automation si
 The site includes:
 
 - A homepage for lead recovery automation
-- A services page for lead capture, intake, booking, follow-up, reviews, and dashboards
+- A services page for lead capture, intake, booking, follow up, reviews, and dashboards
 - A case studies page for pilot/demo systems
 - A free audit page with an email-backed request form
 - A portfolio page for technical proof
