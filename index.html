@@ -49,11 +49,12 @@
 
     <main id="top">
       <section class="hero hero-home hero-business" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true">
+        <div class="hero-media" data-hero-media aria-hidden="true">
           <img src="/assets/hero-workspace.png" alt="" />
         </div>
+        <canvas class="hero-scene" data-hero-scene aria-hidden="true"></canvas>
         <div class="hero-overlay"></div>
-        <div class="hero-inner">
+        <div class="hero-inner" data-hero-content>
           <p class="eyebrow">Lead Recovery Automation for Local Service Businesses</p>
           <h1 id="hero-title">Stop Losing Leads From Missed Calls and Slow Follow Up</h1>
           <p class="hero-copy">
@@ -355,6 +356,7 @@
     </footer>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js" defer></script>
     <script src="/script.js" defer></script>
   </body>
 </html>

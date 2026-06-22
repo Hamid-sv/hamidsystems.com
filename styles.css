@@ -185,10 +185,24 @@ textarea {
   padding: 118px clamp(18px, 4vw, 56px) 64px;
 }
 
+.hero-home {
+  min-height: 100svh;
+  isolation: isolate;
+  perspective: 1200px;
+}
+
 .hero-media,
 .hero-overlay {
   position: absolute;
   inset: 0;
+}
+
+.hero-media {
+  z-index: 0;
+  inset: -5%;
+  transform: translate3d(0, 0, 0) scale(1.08);
+  transform-origin: center;
+  will-change: transform;
 }
 
 .hero-media img {
@@ -198,7 +212,18 @@ textarea {
   object-position: center right;
 }
 
+.hero-scene {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.82;
+}
+
 .hero-overlay {
+  z-index: 2;
   background:
     linear-gradient(90deg, rgba(246, 248, 245, 0.98) 0%, rgba(246, 248, 245, 0.9) 38%, rgba(246, 248, 245, 0.35) 72%),
     linear-gradient(0deg, rgba(246, 248, 245, 0.82) 0%, rgba(246, 248, 245, 0) 40%);
@@ -212,9 +237,10 @@ textarea {
 
 .hero-inner {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: min(var(--max), 100%);
   min-width: 0;
+  will-change: transform;
 }
 
 .eyebrow {
@@ -970,6 +996,14 @@ h3 {
     min-height: 82vh;
   }
 
+  .hero-home {
+    min-height: 100svh;
+  }
+
+  .hero-scene {
+    opacity: 0.58;
+  }
+
   .hero-overlay {
     background:
       linear-gradient(90deg, rgba(246, 248, 245, 0.96) 0%, rgba(246, 248, 245, 0.84) 64%, rgba(246, 248, 245, 0.48) 100%),
@@ -1028,6 +1062,14 @@ h3 {
   .hero {
     padding-top: 104px;
     justify-items: start;
+  }
+
+  .hero-media {
+    inset: -3%;
+  }
+
+  .hero-scene {
+    opacity: 0.42;
   }
 
   .hero-inner {
@@ -1100,5 +1142,16 @@ h3 {
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-media,
+  .hero-inner {
+    transform: none !important;
   }
 }

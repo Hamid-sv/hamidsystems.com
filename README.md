@@ -6,7 +6,7 @@ Live site: [hamidsystems.com](https://hamidsystems.com)
 
 ## Overview
 
-This repository contains the static front end for a local business automation site. It is built with plain HTML, CSS, and JavaScript, then published with GitHub Pages on a custom domain.
+This repository contains the static front end for a local business automation site. It is built with plain HTML, CSS, JavaScript, and a lightweight Three.js hero scene, then published with GitHub Pages on a custom domain.
 
 The site includes:
 
@@ -22,6 +22,7 @@ The site includes:
 - HTML
 - CSS
 - JavaScript
+- Three.js
 - GitHub Pages
 
 ## Local Preview
@@ -43,6 +44,6 @@ Then open `http://localhost:8080`.
 - `contact/` - contact links and business CTA
 - `projects.html`, `about.html`, `contact.html` - redirects for old URLs
 - `styles.css` - shared site styles
-- `script.js` - theme, navigation, copy actions, and audit form mailto fallback
+- `script.js` - theme, navigation, scroll-driven hero motion, copy actions, and audit form mailto fallback
 - `assets/` - visual assets
 - `CNAME` - custom domain configuration
