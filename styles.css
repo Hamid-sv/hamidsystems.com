@@ -203,6 +203,8 @@ textarea {
 
 .hero-home {
   min-height: 100svh;
+  align-items: start;
+  padding-top: clamp(168px, 21vh, 220px);
   isolation: isolate;
   perspective: 1200px;
 }
@@ -1387,6 +1389,8 @@ h3 {
 
   .hero-home {
     min-height: 100svh;
+    align-items: center;
+    padding-top: 118px;
   }
 
   .hero-scene {
