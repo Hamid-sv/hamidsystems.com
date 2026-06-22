@@ -204,7 +204,7 @@ textarea {
 .hero-home {
   min-height: 100svh;
   align-items: start;
-  padding-top: clamp(168px, 21vh, 220px);
+  padding-top: clamp(112px, 13vh, 138px);
   isolation: isolate;
   perspective: 1200px;
 }
