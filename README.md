@@ -1,21 +1,19 @@
-# Hamid Systems
+# Hamid Samadi Portfolio
 
-Business website for Hamid Systems / Samadi Systems.
+Personal technical portfolio for Hamid Samadi.
 
 Live site: [hamidsystems.com](https://hamidsystems.com)
 
 ## Overview
 
-This repository contains the static front end for a local business automation site. It is built with plain HTML, CSS, JavaScript, and a lightweight Three.js hero scene, then published with GitHub Pages on a custom domain.
+This repository contains a static technical portfolio built with plain HTML, CSS, JavaScript, and a lightweight Three.js hero scene, then published with GitHub Pages on a custom domain.
 
 The site includes:
 
-- A homepage for lead recovery automation
-- A services page for lead capture, intake, booking, follow up, reviews, and dashboards
-- A case studies page for pilot/demo systems
-- A free audit page with an email-backed request form
-- A portfolio page for technical proof
-- About and contact pages
+- A homepage introducing Hamid's technical focus and selected work
+- A projects page covering cloud, systems, security, automation, and web builds
+- A skills section for technologies and platforms
+- About and contact pages for professional networking
 
 ## Tech Stack
 
@@ -36,14 +34,12 @@ Then open `http://localhost:8080`.
 ## Structure
 
 - `index.html` - homepage
-- `services/` - services page
-- `case-studies/` - case studies page
-- `free-audit/` - free audit page and form UI
-- `portfolio/` - technical proof and selected work
+- `services/`, `case-studies/`, `free-audit/` - compatibility redirects for older links
+- `portfolio/` - technical projects and selected work
 - `about/` - background and approach
 - `contact/` - contact links and business CTA
 - `projects.html`, `about.html`, `contact.html` - redirects for old URLs
 - `styles.css` - shared site styles
-- `script.js` - theme, navigation, scroll-driven hero motion, copy actions, and audit form mailto fallback
+- `script.js` - theme, navigation, scroll-driven hero motion, and copy actions
 - `assets/` - visual assets
 - `CNAME` - custom domain configuration
