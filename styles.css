@@ -426,9 +426,9 @@ h3 {
   align-content: center;
   justify-content: center;
   grid-template-columns: minmax(0, var(--max));
-  min-height: min(560px, 64vh);
-  padding-top: 116px;
-  padding-bottom: clamp(64px, 8vw, 96px);
+  min-height: min(440px, 54vh);
+  padding-top: 124px;
+  padding-bottom: clamp(54px, 6vw, 72px);
   background:
     linear-gradient(90deg, color-mix(in srgb, var(--surface-2) 96%, transparent), color-mix(in srgb, var(--surface) 92%, transparent));
   border-bottom: 1px solid var(--line);
@@ -1092,23 +1092,52 @@ h3 {
 }
 
 .contact-card {
-  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 320px;
   padding: clamp(22px, 4vw, 32px);
+}
+
+.contact-card > svg {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
 }
 
 .contact-card h2 {
   font-size: clamp(1.6rem, 3vw, 2.4rem);
 }
 
+.contact-card > p {
+  margin: 14px 0 18px;
+}
+
+.contact-card .button {
+  width: 100%;
+  margin-top: auto;
+}
+
 .contact-value {
   display: block;
   width: 100%;
   max-width: 100%;
-  margin: 24px 0;
+  margin: 0 0 18px;
   color: var(--primary-dark);
   font-weight: 780;
   overflow-wrap: anywhere;
   word-break: break-word;
+}
+
+.section.about-layout,
+.section.contact-page,
+.section.portfolio-toolkit {
+  width: 100%;
+  max-width: calc(var(--max) + 112px);
+}
+
+.portfolio-selected-work {
+  padding-top: clamp(62px, 7vw, 90px);
 }
 
 .home-trust-bar,
