@@ -34,6 +34,22 @@
     header.classList.toggle("is-scrolled", window.scrollY > 12);
   }
 
+  function updateHomepageNavState() {
+    if (!primaryNav || window.location.pathname !== "/") return;
+
+    const homeLink = primaryNav.querySelector('a[href="/"]');
+    const skillsLink = primaryNav.querySelector('a[href="/#skills"]');
+    const skillsActive = window.location.hash === "#skills";
+
+    if (skillsActive) {
+      homeLink?.removeAttribute("aria-current");
+      skillsLink?.setAttribute("aria-current", "page");
+    } else {
+      skillsLink?.removeAttribute("aria-current");
+      homeLink?.setAttribute("aria-current", "page");
+    }
+  }
+
   function initHeroDepthScene() {
     const hero = document.querySelector(".hero-home");
     const media = document.querySelector("[data-hero-media]");
@@ -284,6 +300,8 @@
     }
   });
 
+  window.addEventListener("hashchange", updateHomepageNavState);
+
   document.querySelectorAll("[data-copy-value]").forEach(function (button) {
     const label = button.getAttribute("data-copy-label") || "Copy";
     button.addEventListener("click", async function () {
@@ -314,5 +332,6 @@
   });
   window.addEventListener("load", renderIcons);
   handleHeaderShadow();
+  updateHomepageNavState();
   initHeroDepthScene();
 })();
