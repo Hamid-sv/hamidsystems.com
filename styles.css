@@ -789,6 +789,174 @@ h3 {
   margin-bottom: 8px;
 }
 
+.portfolio-capability-band {
+  padding-inline: clamp(18px, 4vw, 56px);
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+#portfolio-title {
+  max-width: 14ch;
+}
+
+.portfolio-capability-grid,
+.portfolio-lab-grid,
+.portfolio-toolkit {
+  width: min(var(--max), 100%);
+  margin-inline: auto;
+}
+
+.portfolio-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.portfolio-capability-grid > div {
+  display: grid;
+  min-width: 0;
+  padding: 28px clamp(18px, 3vw, 34px);
+  border-right: 1px solid var(--line);
+}
+
+.portfolio-capability-grid > div:first-child {
+  padding-left: 0;
+}
+
+.portfolio-capability-grid > div:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.portfolio-capability-grid span {
+  color: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 820;
+}
+
+.portfolio-capability-grid strong {
+  margin-top: 18px;
+  font-size: 1.12rem;
+}
+
+.portfolio-capability-grid small {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.portfolio-featured {
+  padding-bottom: clamp(70px, 9vw, 110px);
+}
+
+.portfolio-featured-project {
+  box-shadow: none;
+}
+
+.portfolio-featured-project:first-child {
+  border-color: color-mix(in srgb, var(--primary) 55%, var(--line));
+}
+
+.portfolio-project-note {
+  align-content: start;
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
+}
+
+.portfolio-project-note > strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.portfolio-project-note > p {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.portfolio-project-note .text-link {
+  margin-top: 12px;
+}
+
+.portfolio-project-actions {
+  align-self: center;
+}
+
+.portfolio-labs {
+  background: var(--surface-2);
+  border-block: 1px solid var(--line);
+}
+
+.portfolio-lab-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.lab-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 286px;
+  padding: 28px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.lab-card > svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 26px;
+  color: var(--rust);
+}
+
+.lab-card h3 {
+  max-width: 23ch;
+  margin-top: 28px;
+  font-size: clamp(1.28rem, 2vw, 1.65rem);
+}
+
+.lab-card p {
+  max-width: 58ch;
+  margin: 14px 0 26px;
+  color: var(--muted);
+}
+
+.lab-card .tag-list {
+  margin-top: auto;
+}
+
+.portfolio-toolkit {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(420px, 1.15fr);
+  gap: clamp(38px, 8vw, 100px);
+  align-items: start;
+}
+
+.portfolio-toolkit-copy p:last-child {
+  max-width: 640px;
+  color: var(--muted);
+}
+
+.portfolio-toolkit-list {
+  border-top: 1px solid var(--line);
+}
+
+.portfolio-toolkit-list > div {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.38fr) minmax(0, 1fr);
+  gap: 24px;
+  padding: 19px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.portfolio-toolkit-list span {
+  color: var(--muted);
+}
+
+.portfolio-cta {
+  padding-top: 0;
+}
+
 .about-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
@@ -1470,6 +1638,33 @@ h3 {
   .home-final-cta .contact-actions {
     justify-content: flex-start;
   }
+
+  .portfolio-capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio-capability-grid > div:nth-child(2) {
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .portfolio-capability-grid > div:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .portfolio-capability-grid > div:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+
+  .portfolio-toolkit {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-project-note {
+    padding: 20px 0 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
 }
 
 @media (max-width: 620px) {
@@ -1628,6 +1823,41 @@ h3 {
   .home-proof-list > div {
     grid-template-columns: 1fr;
     gap: 6px;
+  }
+
+  .portfolio-capability-grid,
+  .portfolio-lab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #portfolio-title {
+    max-width: 350px;
+    font-size: clamp(2.35rem, 11vw, 2.9rem);
+    overflow-wrap: normal;
+  }
+
+  .portfolio-capability-grid > div,
+  .portfolio-capability-grid > div:first-child,
+  .portfolio-capability-grid > div:nth-child(2),
+  .portfolio-capability-grid > div:nth-child(3),
+  .portfolio-capability-grid > div:last-child {
+    padding: 20px 0;
+    border-right: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .portfolio-capability-grid > div:first-child {
+    border-top: 0;
+  }
+
+  .lab-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .portfolio-toolkit-list > div {
+    grid-template-columns: 1fr;
+    gap: 5px;
   }
 }
 
