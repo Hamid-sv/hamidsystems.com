@@ -1,29 +1,31 @@
 # Hamid Samadi Portfolio
 
-Personal technical portfolio for Hamid Samadi.
+Personal technical portfolio for Hamid Samadi, focused on IT systems, cloud infrastructure, networking, automation, technical support, and practical software projects.
 
 Live site: [hamidsystems.com](https://hamidsystems.com)
 
-## Overview
+## Technology
 
-This repository contains a static technical portfolio built with plain HTML, CSS, JavaScript, and a lightweight Three.js hero scene, then published with GitHub Pages on a custom domain.
+- Semantic HTML
+- Shared CSS with light and dark themes
+- Plain JavaScript
+- Lucide icons
+- Lightweight Three.js homepage visualization
+- GitHub Pages with a custom domain
 
-The site includes:
+## Primary Pages
 
-- A homepage introducing Hamid's technical focus and selected work
-- A projects page covering cloud, systems, security, automation, and web builds
-- A skills section for technologies and platforms
-- About and contact pages for professional networking
+- `/` - homepage, featured work, skills, process, and contact invitation
+- `/projects/` - project overview and category filters
+- `/projects/document-email-automation/` - detailed private-project case study
+- `/about/` - professional focus, education, background, and working approach
+- `/contact/` - email, LinkedIn, GitHub, and location
 
-## Tech Stack
-
-- HTML
-- CSS
-- JavaScript
-- Three.js
-- GitHub Pages
+Older addresses under `/portfolio/`, `/services/`, `/case-studies/`, `/free-audit/`, and root-level `.html` files remain as compatibility redirects.
 
 ## Local Preview
+
+From this repository directory:
 
 ```powershell
 python -m http.server 8080
@@ -31,15 +33,10 @@ python -m http.server 8080
 
 Then open `http://localhost:8080`.
 
-## Structure
+## Content Updates
 
-- `index.html` - homepage
-- `services/`, `case-studies/`, `free-audit/` - compatibility redirects for older links
-- `portfolio/` - technical projects and selected work
-- `about/` - background and approach
-- `contact/` - contact links and business CTA
-- `projects.html`, `about.html`, `contact.html` - redirects for old URLs
-- `styles.css` - shared site styles
-- `script.js` - theme, navigation, scroll-driven hero motion, and copy actions
-- `assets/` - visual assets
-- `CNAME` - custom domain configuration
+See `CONTENT_NEEDED.md` for assets or facts that still require Hamid's confirmation. The approved resume is available at `/assets/Hamid-Samadi-Resume.pdf`, and the homepage download links point to that file.
+
+## Deployment
+
+The repository is designed to publish from its root through GitHub Pages. `CNAME` must remain in the root and contain `hamidsystems.com`.

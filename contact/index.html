@@ -3,106 +3,82 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Contact Hamid Samadi about IT roles, systems work, technical projects, networking, or collaboration."
-    />
-    <meta property="og:title" content="Contact | Hamid Samadi" />
+    <meta name="theme-color" content="#101312" />
+    <meta name="description" content="Contact customer support engineer Hamid Samadi about technical support, application support, Linux, web services, cloud infrastructure, or automation." />
+    <link rel="canonical" href="https://hamidsystems.com/contact/" />
+    <meta property="og:title" content="Contact Hamid Samadi" />
     <meta property="og:description" content="Connect with Hamid Samadi by email, LinkedIn, or GitHub." />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://hamidsystems.com/contact/" />
-    <title>Contact | Hamid Samadi</title>
+    <meta property="og:image" content="https://hamidsystems.com/assets/hamid-samadi-headshot.png" />
+    <meta property="og:image:alt" content="Professional portrait of Hamid Samadi" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Hamid Samadi" />
+    <meta name="twitter:description" content="Contact Hamid Samadi about customer support engineering, application support, Linux, web, cloud, or automation opportunities." />
+    <meta name="twitter:image" content="https://hamidsystems.com/assets/hamid-samadi-headshot.png" />
+    <title>Contact Hamid Samadi</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      document.documentElement.dataset.theme = localStorage.getItem("hamid-systems-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header" data-header>
-      <a class="brand" href="/" aria-label="Hamid Samadi home">
-        <span class="brand-mark">HS</span>
-        <span>Hamid Samadi</span>
-      </a>
-
+      <a class="brand" href="/" aria-label="Hamid Samadi home"><span class="brand-mark">HS</span><span>Hamid Samadi</span></a>
       <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
-        <a href="/">Home</a>
-        <a href="/portfolio/">Projects</a>
-        <a href="/#skills">Skills</a>
-        <a href="/about/">About</a>
-        <a href="/contact/" aria-current="page">Contact</a>
+        <a href="/">Home</a><a href="/projects/">Projects</a><a href="/#skills">Skills</a><a href="/about/">About</a><a href="/contact/" aria-current="page">Contact</a>
       </nav>
-
       <div class="header-actions">
         <a class="header-cta" href="mailto:hamidsamadivaghefi@gmail.com?subject=Portfolio%20Inquiry">Email Me</a>
-        <button class="icon-button menu-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
-          <i data-lucide="menu"></i>
-        </button>
-        <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
-          <i data-lucide="moon"></i>
-        </button>
+        <button class="icon-button menu-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><i data-lucide="menu"></i></button>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="true" title="Toggle theme"><i data-lucide="moon"></i></button>
       </div>
     </header>
 
-    <main id="top">
+    <main id="main-content">
       <section class="page-hero contact-hero" aria-labelledby="contact-title">
         <p class="eyebrow">Contact</p>
         <h1 id="contact-title">Let's connect.</h1>
         <p>
-          Reach out about IT roles, systems and cloud work, technical projects, networking, or collaboration.
+          I'm open to conversations about customer support engineering, application support, technical support,
+          Linux and web services, cloud infrastructure, and automation opportunities across the GTA or remotely.
         </p>
       </section>
 
       <section class="section contact-page" aria-label="Contact options">
         <div class="contact-card">
-          <i data-lucide="mail"></i>
-          <h2>Email</h2>
-          <p>The best direct option for opportunities, project questions, and professional conversations.</p>
-          <a class="contact-value" href="mailto:hamidsamadivaghefi@gmail.com?subject=Portfolio%20Inquiry">
-            hamidsamadivaghefi@gmail.com
-          </a>
-          <button class="button button-secondary" type="button" data-copy-value="hamidsamadivaghefi@gmail.com" data-copy-label="Copy Email">
-            <i data-lucide="copy"></i>
-            <span>Copy Email</span>
+          <i data-lucide="mail"></i><h2>Email</h2>
+          <p>The most direct option for opportunities, project questions, and professional conversations.</p>
+          <a class="contact-value" href="mailto:hamidsamadivaghefi@gmail.com?subject=Portfolio%20Inquiry">hamidsamadivaghefi@gmail.com</a>
+          <button class="button button-secondary" type="button" data-copy-value="hamidsamadivaghefi@gmail.com" data-copy-label="Copy Email" aria-describedby="copy-status">
+            <i data-lucide="copy"></i><span>Copy Email</span>
           </button>
+          <p class="sr-only" id="copy-status" data-copy-status aria-live="polite"></p>
         </div>
-
         <div class="contact-card">
-          <i data-lucide="briefcase-business"></i>
-          <h2>LinkedIn</h2>
+          <i data-lucide="briefcase-business"></i><h2>LinkedIn</h2>
           <p>Connect for professional networking, roles, project updates, and technical conversations.</p>
-          <a class="button button-secondary" href="https://www.linkedin.com/in/hamid-samadi/" target="_blank" rel="noreferrer">
-            <i data-lucide="external-link"></i>
-            <span>LinkedIn</span>
-          </a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/hamid-samadi/" target="_blank" rel="noreferrer"><i data-lucide="external-link"></i><span>LinkedIn</span></a>
         </div>
-
         <div class="contact-card">
-          <i data-lucide="code-2"></i>
-          <h2>GitHub</h2>
+          <i data-lucide="code-2"></i><h2>GitHub</h2>
           <p>View public code, website history, and technical project repositories.</p>
-          <a class="button button-secondary" href="https://github.com/Hamid-sv" target="_blank" rel="noreferrer">
-            <i data-lucide="code-2"></i>
-            <span>GitHub</span>
-          </a>
+          <a class="button button-secondary" href="https://github.com/Hamid-sv" target="_blank" rel="noreferrer"><i data-lucide="external-link"></i><span>GitHub</span></a>
         </div>
-
         <div class="contact-card">
-          <i data-lucide="map-pin"></i>
-          <h2>Location</h2>
-          <p>Based in the Greater Toronto Area and open to local, hybrid, and remote opportunities.</p>
+          <i data-lucide="map-pin"></i><h2>Greater Toronto Area</h2>
+          <p>Open to local, hybrid, and remote support engineering, application support, infrastructure, and automation opportunities.</p>
           <a class="button button-secondary" href="/about/"><i data-lucide="user"></i><span>About Me</span></a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Hamid Samadi. Cloud, systems, security, and automation.</p>
-      <div>
-        <a href="/portfolio/">Projects</a>
-        <a href="/#skills">Skills</a>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
-      </div>
+      <p>&copy; <span id="year"></span> Hamid Samadi. Customer support, Linux, web, cloud, and automation.</p>
+      <div><a href="/projects/">Projects</a><a href="/#skills">Skills</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
     </footer>
-
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
     <script src="/script.js" defer></script>
   </body>

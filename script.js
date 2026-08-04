@@ -17,6 +17,7 @@
     if (themeToggle) {
       themeToggle.innerHTML = nextTheme === "dark" ? '<i data-lucide="sun"></i>' : '<i data-lucide="moon"></i>';
       themeToggle.setAttribute("aria-label", nextTheme === "dark" ? "Use light theme" : "Use dark theme");
+      themeToggle.setAttribute("aria-pressed", String(nextTheme === "dark"));
       renderIcons();
     }
   }
@@ -300,24 +301,108 @@
     }
   });
 
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && menuToggle?.getAttribute("aria-expanded") === "true") {
+      setMenu(false);
+      menuToggle.focus();
+    }
+  });
+
   window.addEventListener("hashchange", updateHomepageNavState);
+
+  async function copyToClipboard(value) {
+    if (navigator.clipboard?.writeText && window.isSecureContext) {
+      try {
+        await Promise.race([
+          navigator.clipboard.writeText(value),
+          new Promise(function (_resolve, reject) {
+            window.setTimeout(function () {
+              reject(new Error("Clipboard request timed out"));
+            }, 700);
+          })
+        ]);
+        return true;
+      } catch (_error) {
+        // Fall through to the selection-based copy method.
+      }
+    }
+
+    const field = document.createElement("textarea");
+    field.value = value;
+    field.setAttribute("readonly", "");
+    field.style.position = "fixed";
+    field.style.opacity = "0";
+    document.body.appendChild(field);
+    field.select();
+    const copied = document.execCommand("copy");
+    field.remove();
+    return copied;
+  }
 
   document.querySelectorAll("[data-copy-value]").forEach(function (button) {
     const label = button.getAttribute("data-copy-label") || "Copy";
     button.addEventListener("click", async function () {
       const value = button.getAttribute("data-copy-value") || "";
       const span = button.querySelector("span");
+      const status = button.parentElement?.querySelector("[data-copy-status]");
       try {
-        await navigator.clipboard.writeText(value);
+        if (span) span.textContent = "Copying";
+        if (status) status.textContent = "Copying email address.";
+        const copied = await copyToClipboard(value);
+        if (!copied) throw new Error("Copy was not available");
         if (span) span.textContent = "Copied";
+        if (status) status.textContent = "Email address copied to clipboard.";
         window.setTimeout(function () {
           if (span) span.textContent = label;
+          if (status) status.textContent = "";
         }, 1300);
       } catch (_error) {
-        window.location.href = value.startsWith("http") ? value : "mailto:" + value;
+        if (span) span.textContent = label;
+        if (status) status.textContent = "Copy was unavailable. Select the email address shown above.";
       }
     });
   });
+
+  const projectFilters = document.querySelector("[data-project-filters]");
+  if (projectFilters) {
+    const filterButtons = Array.from(projectFilters.querySelectorAll("[data-project-filter]"));
+    const projectCards = Array.from(document.querySelectorAll("[data-project-card]"));
+    const filterStatus = document.querySelector("[data-filter-status]");
+
+    projectFilters.addEventListener("keydown", function (event) {
+      if (!(event.target instanceof HTMLButtonElement)) return;
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      event.target.click();
+    });
+
+    projectFilters.addEventListener("click", function (event) {
+      const button = event.target.closest("[data-project-filter]");
+      if (!(button instanceof HTMLButtonElement)) return;
+
+      const filter = button.dataset.projectFilter || "all";
+      filterButtons.forEach(function (item) {
+        const selected = item === button;
+        item.classList.toggle("is-selected", selected);
+        item.setAttribute("aria-pressed", String(selected));
+      });
+
+      let visibleCount = 0;
+      projectCards.forEach(function (card) {
+        const categories = (card.getAttribute("data-categories") || "").split(/\s+/);
+        const visible = filter === "all" || categories.includes(filter);
+        card.hidden = !visible;
+        if (visible) visibleCount += 1;
+      });
+
+      if (filterStatus) {
+        const labelText = button.textContent?.trim() || "selected";
+        filterStatus.textContent = filter === "all"
+          ? "Showing all " + visibleCount + " projects"
+          : "Showing " + visibleCount + " " + labelText + " projects";
+      }
+    });
+  }
 
   const year = document.getElementById("year");
   if (year) {

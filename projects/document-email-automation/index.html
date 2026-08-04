@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101312" />
+    <meta name="description" content="A private desktop automation project by Hamid Samadi for retrieving email attachments, processing scanned PDFs with OCR, organizing files, and supporting repeatable Windows deployment." />
+    <link rel="canonical" href="https://hamidsystems.com/projects/document-email-automation/" />
+    <meta property="og:title" content="Document and Email Workflow Automation | Hamid Samadi" />
+    <meta property="og:description" content="A private document-processing workflow combining email retrieval, PDF processing, OCR, file organization, logging, and packaged Windows deployment." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://hamidsystems.com/projects/document-email-automation/" />
+    <meta property="og:image" content="https://hamidsystems.com/assets/hero-workspace.png" />
+    <meta property="og:image:alt" content="Technical workspace representing document and workflow automation" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Document and Email Workflow Automation | Hamid Samadi" />
+    <meta name="twitter:description" content="Email retrieval, scanned PDF processing, OCR, file organization, logging, and packaged deployment." />
+    <meta name="twitter:image" content="https://hamidsystems.com/assets/hero-workspace.png" />
+    <title>Document and Email Workflow Automation | Hamid Samadi</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      document.documentElement.dataset.theme = localStorage.getItem("hamid-systems-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="Hamid Samadi home"><span class="brand-mark">HS</span><span>Hamid Samadi</span></a>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a><a href="/projects/" aria-current="page">Projects</a><a href="/#skills">Skills</a><a href="/about/">About</a><a href="/contact/">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-cta" href="/contact/">Connect</a>
+        <button class="icon-button menu-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><i data-lucide="menu"></i></button>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="true" title="Toggle theme"><i data-lucide="moon"></i></button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-hero project-detail-hero" aria-labelledby="project-title">
+        <p class="eyebrow">Private Project | Workflow Automation</p>
+        <h1 id="project-title">Document and Email Workflow Automation</h1>
+        <p>A desktop workflow for retrieving attachments, processing scanned forms, extracting document information, organizing output, and supporting repeatable deployment.</p>
+      </section>
+
+      <section class="section case-study-overview" aria-labelledby="overview-title">
+        <div class="case-study-copy">
+          <p class="eyebrow">Project overview</p>
+          <h2 id="overview-title">A repeatable path from inbox to organized output.</h2>
+          <p class="lead-small">
+            The application retrieves relevant email attachments, processes scanned PDF forms using OCR, identifies
+            useful document information, renames and organizes files, and packages the workflow for non-technical staff.
+          </p>
+        </div>
+        <aside class="project-facts" aria-label="Project facts">
+          <div><span>Status</span><strong>Private Project</strong></div>
+          <div><span>Environment</span><strong>Windows desktop workflow</strong></div>
+          <div><span>Core technology</span><strong>Python, OCR, PDF and file-system automation</strong></div>
+          <div><span>Focus</span><strong>Consistency, logging, and operational handoff</strong></div>
+        </aside>
+      </section>
+
+      <section class="section case-study-problem" aria-labelledby="problem-title">
+        <div class="case-study-two-column">
+          <div>
+            <p class="eyebrow">Operational problem</p>
+            <h2 id="problem-title">Manual document handling created too many repeated steps.</h2>
+          </div>
+          <p>
+            The original workflow required staff to manually open messages, download attachments, review scanned forms,
+            identify important document details, rename files, and organize the results. The project was designed to make
+            that process more consistent and repeatable.
+          </p>
+        </div>
+      </section>
+
+      <section class="section workflow-section" aria-labelledby="workflow-title">
+        <div class="section-heading section-heading-wide">
+          <p class="eyebrow">Solution</p>
+          <h2 id="workflow-title">One clear processing workflow.</h2>
+          <p class="section-subtitle">The application combines email retrieval, PDF processing, OCR, structured file naming, folder organization, logging, and Windows deployment.</p>
+        </div>
+        <div class="workflow-diagram" aria-label="Email to processing log workflow">
+          <div class="workflow-step"><i data-lucide="mail"></i><span>Email</span></div><i class="workflow-arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+          <div class="workflow-step"><i data-lucide="paperclip"></i><span>Attachment Retrieval</span></div><i class="workflow-arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+          <div class="workflow-step"><i data-lucide="file-text"></i><span>PDF Processing</span></div><i class="workflow-arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+          <div class="workflow-step"><i data-lucide="scan-text"></i><span>OCR and Data Extraction</span></div><i class="workflow-arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+          <div class="workflow-step"><i data-lucide="file-pen-line"></i><span>File Naming</span></div><i class="workflow-arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+          <div class="workflow-step"><i data-lucide="folders"></i><span>Organized Output</span></div><i class="workflow-arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+          <div class="workflow-step"><i data-lucide="logs"></i><span>Processing Log</span></div>
+        </div>
+      </section>
+
+      <section class="section functionality-section" aria-labelledby="functionality-title">
+        <div class="section-heading"><p class="eyebrow">Key functionality</p><h2 id="functionality-title">Built around the complete handoff.</h2></div>
+        <div class="function-grid">
+          <article><i data-lucide="mail-search"></i><h3>Retrieve</h3><p>Finds and retrieves relevant email attachments for processing.</p></article>
+          <article><i data-lucide="scan-text"></i><h3>Read</h3><p>Processes scanned PDF forms and uses OCR to identify document names and dates.</p></article>
+          <article><i data-lucide="files"></i><h3>Organize</h3><p>Renames files using extracted information and places them into structured folders.</p></article>
+          <article><i data-lucide="list-checks"></i><h3>Track</h3><p>Records completed and failed processing so outcomes can be reviewed.</p></article>
+          <article><i data-lucide="package-check"></i><h3>Package</h3><p>Supports installer-based deployment for staff who do not work directly with source code.</p></article>
+          <article><i data-lucide="book-open-check"></i><h3>Hand off</h3><p>Supports repeatable deployment and operational use through predictable outputs and documentation.</p></article>
+        </div>
+      </section>
+
+      <section class="section implementation-band" aria-labelledby="implementation-title">
+        <div>
+          <p class="eyebrow">Technology and implementation</p>
+          <h2 id="implementation-title">A desktop automation pipeline.</h2>
+          <p>The implementation uses Python with OCR, PDF processing, email automation, file-system automation, logging, error handling, and Windows packaging. Specific third-party libraries are intentionally omitted until they are confirmed for public disclosure.</p>
+        </div>
+        <ul class="tag-list implementation-tags"><li>Python</li><li>OCR</li><li>PDF Processing</li><li>Email Automation</li><li>File Automation</li><li>Logging</li><li>Windows Packaging</li></ul>
+      </section>
+
+      <section class="section supportability-section" aria-labelledby="supportability-title">
+        <div class="section-heading section-heading-wide"><p class="eyebrow">Error handling and supportability</p><h2 id="supportability-title">Designed so failures can be understood.</h2></div>
+        <div class="supportability-list">
+          <div><i data-lucide="logs"></i><span><strong>Clear processing logs</strong> record completed and failed work for review.</span></div>
+          <div><i data-lucide="folders"></i><span><strong>Predictable output folders</strong> keep processed documents organized.</span></div>
+          <div><i data-lucide="shield-alert"></i><span><strong>Graceful failure handling</strong> prevents one failed document from hiding the overall result.</span></div>
+          <div><i data-lucide="clipboard-check"></i><span><strong>Validation before file changes</strong> reduces incorrect moves or renaming.</span></div>
+          <div><i data-lucide="package-open"></i><span><strong>Packaged deployment</strong> makes the workflow usable without a development environment.</span></div>
+          <div><i data-lucide="book-open"></i><span><strong>Operational documentation</strong> supports non-technical use and repeatable handoff.</span></div>
+        </div>
+      </section>
+
+      <section class="section deployment-section" aria-labelledby="deployment-title">
+        <div class="case-study-two-column">
+          <div><p class="eyebrow">Deployment and installer</p><h2 id="deployment-title">Built for use outside a developer workstation.</h2></div>
+          <p>The workflow can be packaged into a Windows installer so non-technical staff can run it without managing Python source files or development tooling. The deployment approach also supports a clearer handoff and a repeatable setup process.</p>
+        </div>
+      </section>
+
+      <section class="section privacy-note" aria-labelledby="privacy-title">
+        <i data-lucide="lock-keyhole"></i>
+        <div><p class="eyebrow">Privacy and confidentiality</p><h2 id="privacy-title">Private information stays private.</h2><p>This portfolio description intentionally excludes company names, employee information, email addresses, document contents, credentials, and private implementation details. No repository or private application data is linked publicly.</p></div>
+      </section>
+
+      <section class="section lessons-section" aria-labelledby="lessons-title">
+        <div class="section-heading"><p class="eyebrow">Lessons learned</p><h2 id="lessons-title">Automation includes the operating experience.</h2></div>
+        <div class="summary-grid">
+          <article class="summary-item"><span class="item-number">01</span><h3>Input quality matters</h3><p>Scanned documents require validation and clear failure handling because image quality and layouts can vary.</p></article>
+          <article class="summary-item"><span class="item-number">02</span><h3>Logs are part of the product</h3><p>Staff need to know what completed, what failed, and what requires review.</p></article>
+          <article class="summary-item"><span class="item-number">03</span><h3>Deployment completes the workflow</h3><p>A useful script becomes an operable tool when packaging, folders, documentation, and handoff are considered.</p></article>
+        </div>
+      </section>
+
+      <section class="section case-study-cta" aria-labelledby="case-cta-title">
+        <a class="text-link back-link" href="/projects/"><i data-lucide="arrow-left"></i> Back to all projects</a>
+        <div class="contact-strip"><div><p class="eyebrow">Contact</p><h2 id="case-cta-title">Want to discuss this kind of technical work?</h2><p>Connect with me about systems implementation, workflow automation, IT support, or infrastructure opportunities.</p></div><a class="button button-primary" href="/contact/"><i data-lucide="send"></i><span>Contact Me</span></a></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Hamid Samadi. Customer support, Linux, web, cloud, and automation.</p>
+      <div><a href="/projects/">Projects</a><a href="/#skills">Skills</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+    </footer>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="/script.js" defer></script>
+  </body>
+</html>

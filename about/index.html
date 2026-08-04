@@ -3,90 +3,126 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101312" />
     <meta
       name="description"
-      content="About Hamid Samadi, a GTA-based IT and systems professional with experience across cloud infrastructure, networking, security, automation, and web systems."
+      content="About Hamid Samadi, a GTA-based customer support engineer with experience across Linux, web services, cloud infrastructure, application support, and automation."
     />
-    <meta property="og:title" content="About | Hamid Samadi" />
-    <meta property="og:description" content="Background, technical focus, and working approach of Hamid Samadi." />
-    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://hamidsystems.com/about/" />
+    <meta property="og:title" content="About Hamid Samadi | Customer Support Engineer" />
+    <meta property="og:description" content="Support experience, technical focus, education, and working approach of Hamid Samadi." />
+    <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://hamidsystems.com/about/" />
-    <title>About | Hamid Samadi</title>
+    <meta property="og:image" content="https://hamidsystems.com/assets/hamid-samadi-headshot.png" />
+    <meta property="og:image:alt" content="Professional portrait of Hamid Samadi" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Hamid Samadi | Customer Support Engineer" />
+    <meta name="twitter:description" content="Support experience, technical focus, education, and working approach of Hamid Samadi." />
+    <meta name="twitter:image" content="https://hamidsystems.com/assets/hamid-samadi-headshot.png" />
+    <title>About Hamid Samadi | Customer Support Engineer</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      document.documentElement.dataset.theme = localStorage.getItem("hamid-systems-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header" data-header>
       <a class="brand" href="/" aria-label="Hamid Samadi home">
         <span class="brand-mark">HS</span>
         <span>Hamid Samadi</span>
       </a>
-
       <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
         <a href="/">Home</a>
-        <a href="/portfolio/">Projects</a>
+        <a href="/projects/">Projects</a>
         <a href="/#skills">Skills</a>
         <a href="/about/" aria-current="page">About</a>
         <a href="/contact/">Contact</a>
       </nav>
-
       <div class="header-actions">
-        <a class="header-cta" href="/contact/">Connect</a>
-        <button class="icon-button menu-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
-          <i data-lucide="menu"></i>
-        </button>
-        <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
-          <i data-lucide="moon"></i>
-        </button>
+        <a class="header-cta" href="/assets/Hamid-Samadi-Resume.pdf" download>Resume</a>
+        <button class="icon-button menu-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><i data-lucide="menu"></i></button>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="true" title="Toggle theme"><i data-lucide="moon"></i></button>
       </div>
     </header>
 
-    <main id="top">
-      <section class="page-hero" aria-labelledby="about-title">
-        <p class="eyebrow">About</p>
-        <h1 id="about-title">Technical work grounded in real systems.</h1>
-        <p>
-          I work across cloud infrastructure, networking, security, server administration, automation, and web systems.
-        </p>
+    <main id="main-content">
+      <section class="page-hero about-page-hero" aria-labelledby="about-title">
+        <div class="about-hero-copy">
+          <p class="eyebrow">About</p>
+          <h1 id="about-title">About Hamid</h1>
+          <p>Customer support experience grounded in Linux, web services, cloud infrastructure, and clear technical communication.</p>
+        </div>
+        <figure class="about-headshot">
+          <img
+            src="/assets/hamid-samadi-headshot.png"
+            alt="Hamid Samadi wearing a dark suit and tie"
+            width="1254"
+            height="1254"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
       </section>
 
       <section class="section about-layout" aria-label="About Hamid Samadi">
         <div class="about-copy">
           <p class="lead">
-            I am Hamid Samadi, an IT and systems professional based in the GTA. I enjoy work that connects the
-            infrastructure underneath a system with the tools and interfaces people use every day.
+            I'm Hamid Samadi, a Richmond Hill-based customer support engineer with direct Tier 1 and Tier 2 experience
+            and more than eight years in customer-facing roles.
           </p>
           <p>
-            My project work includes Microsoft Azure, AWS, Windows Server, Active Directory, Linux, networking,
-            cybersecurity monitoring, Python, PowerShell, databases, dashboards, and web development.
+            I enjoy reproducing technical problems, reviewing logs and evidence, identifying likely causes, guiding
+            users through clear next steps, and documenting complete escalation notes when an issue needs deeper support.
           </p>
           <p>
-            I care about systems that are understandable and supportable: clear configuration, useful monitoring,
-            careful testing, straightforward documentation, and an obvious next step when something goes wrong.
-          </p>
-          <p>
-            Hamid Systems is the name I use for this portfolio and my independent technical projects.
+            Hamid Systems is the name used for my technical portfolio and independent projects. My professional
+            identity throughout this site is Hamid Samadi.
           </p>
         </div>
-
         <aside class="profile-panel" aria-label="Profile summary">
-          <div>
-            <span>Based in</span>
-            <strong>GTA</strong>
-          </div>
-          <div>
-            <span>Focus</span>
-            <strong>Cloud, systems administration, networking, security, and automation</strong>
-          </div>
-          <div>
-            <span>Working style</span>
-            <strong>Practical, careful, and well documented</strong>
-          </div>
-          <div>
-            <span>Interested in</span>
-            <strong>IT support, systems, cloud, infrastructure, and automation opportunities</strong>
-          </div>
+          <div><span>Based in</span><strong>Richmond Hill and the Greater Toronto Area</strong></div>
+          <div><span>Primary focus</span><strong>Customer support engineering, Linux, web services, and application support</strong></div>
+          <div><span>Working style</span><strong>Patient, evidence-driven, clear, and well documented</strong></div>
+          <div><span>Opportunities</span><strong>Local, hybrid, and remote</strong></div>
         </aside>
+      </section>
+
+      <section class="section professional-focus" aria-labelledby="focus-title">
+        <div class="section-heading section-heading-wide">
+          <p class="eyebrow">Professional focus</p>
+          <h2 id="focus-title">Support skills from first contact to technical escalation.</h2>
+        </div>
+        <ul class="focus-list">
+          <li>Ticket triage, first-contact resolution, and escalation</li>
+          <li>Windows, Microsoft 365, Ubuntu, and Linux support</li>
+          <li>SSH, systemd, DNS, ports, firewalls, and service logs</li>
+          <li>REST APIs, JSON, validation, and bug reproduction</li>
+          <li>Azure, AWS, VPS, networking, identity, and monitoring</li>
+          <li>Python, FastAPI, PowerShell, and support automation</li>
+          <li>Hardware, endpoints, VPN, Wi-Fi, and connectivity</li>
+          <li>Incident notes, diagnostic evidence, and documentation</li>
+        </ul>
+      </section>
+
+      <section class="section about-experience" aria-labelledby="experience-title">
+        <div class="section-heading section-heading-wide">
+          <p class="eyebrow">Professional experience</p>
+          <h2 id="experience-title">Customer communication with technical depth.</h2>
+        </div>
+        <div class="experience-list">
+          <article><div><span>2025 to present</span><strong>Outlier AI</strong></div><div><h3>Technical Quality Review</h3><p>Evaluate technical responses for accuracy, reliability, clarity, and reproducibility while documenting corrections.</p></div></article>
+          <article><div><span>2021 to 2023</span><strong>Nordia / Bell Support Environment</strong></div><div><h3>IT Support Technician</h3><p>Handled Tier 1 and Tier 2 requests across Windows, Microsoft 365, accounts, hardware, software, VPN, Wi-Fi, DNS, DHCP, and connectivity.</p></div></article>
+          <article><div><span>2018 to 2021</span><strong>iMarketing Solutions Group</strong></div><div><h3>Client Solutions Advisor</h3><p>Supported customers through phone and digital channels while maintaining CRM history, follow-up, and clear next steps.</p></div></article>
+        </div>
+      </section>
+
+      <section class="section background-band" aria-labelledby="background-title">
+        <div class="background-grid education-background-grid">
+          <div><p class="eyebrow">2023 to 2025</p><h2 id="background-title">Computer Systems Technician</h2><p>Seneca Polytechnic</p></div>
+          <div><p class="eyebrow">2022 to 2023</p><h2>Network Administration</h2><p>CIMT College</p></div>
+        </div>
       </section>
 
       <section class="section values-band" aria-labelledby="values-title">
@@ -98,32 +134,35 @@
           <article class="summary-item">
             <i data-lucide="scan-search"></i>
             <h3>Understand the environment</h3>
-            <p>Identify the goal, dependencies, current state, constraints, and likely failure points first.</p>
+            <p>Review the users, systems, workflow, dependencies, and technical requirements before making changes.</p>
           </article>
           <article class="summary-item">
             <i data-lucide="wrench"></i>
             <h3>Build for supportability</h3>
-            <p>Prefer clear configurations, useful status, sensible defaults, and repeatable operations.</p>
+            <p>Create solutions that are practical, maintainable, understandable, and appropriate for the environment.</p>
           </article>
           <article class="summary-item">
             <i data-lucide="clipboard-check"></i>
             <h3>Verify and document</h3>
-            <p>Test the expected path, check edge cases, and leave evidence and steps another person can follow.</p>
+            <p>Test the implementation, confirm expected behaviour, and document important setup and support information.</p>
           </article>
         </div>
+      </section>
+
+      <section class="section opportunity-strip" aria-labelledby="opportunity-title">
+        <div>
+          <p class="eyebrow">Opportunities</p>
+          <h2 id="opportunity-title">Open to practical technical roles.</h2>
+          <p>I am interested in customer support engineering, application support, technical support, systems administration, and junior cloud or infrastructure opportunities.</p>
+        </div>
+        <a class="button button-primary" href="/contact/"><i data-lucide="send"></i><span>Contact Me</span></a>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Hamid Samadi. Cloud, systems, security, and automation.</p>
-      <div>
-        <a href="/portfolio/">Projects</a>
-        <a href="/#skills">Skills</a>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
-      </div>
+      <p>&copy; <span id="year"></span> Hamid Samadi. Customer support, Linux, web, cloud, and automation.</p>
+      <div><a href="/projects/">Projects</a><a href="/#skills">Skills</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
     </footer>
-
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
     <script src="/script.js" defer></script>
   </body>
