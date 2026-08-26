@@ -4,24 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#101312" />
-    <meta name="description" content="Technical support, systems, cloud, security, and automation projects by Hamid Samadi." />
+    <meta name="description" content="Cloud administration, Linux, systems, networking, security, and automation projects by Hamid Samadi." />
     <link rel="canonical" href="https://hamidsystems.com/projects/" />
     <meta property="og:title" content="Projects | Hamid Samadi" />
-    <meta property="og:description" content="Practical projects across Linux support, web deployment, APIs, cloud infrastructure, networking, and automation." />
+    <meta property="og:description" content="Hands-on projects across Linux administration, Azure, AWS, networking, security, recovery, and automation." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hamidsystems.com/projects/" />
     <meta property="og:image" content="https://hamidsystems.com/assets/hero-support-workspace-v2.webp" />
     <meta property="og:image:alt" content="Professional technical support workspace" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Projects | Hamid Samadi" />
-    <meta name="twitter:description" content="Linux support, web deployment, cloud infrastructure, and automation projects." />
+    <meta name="twitter:description" content="Linux administration, cloud infrastructure, networking, security, recovery, and automation projects." />
     <meta name="twitter:image" content="https://hamidsystems.com/assets/hero-support-workspace-v2.webp" />
     <title>Projects | Hamid Samadi</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script>
       document.documentElement.dataset.theme = localStorage.getItem("hamid-systems-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     </script>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles.css?v=20260825-cloud" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -40,14 +40,15 @@
     <main id="main-content">
       <section class="page-hero" aria-labelledby="projects-title">
         <p class="eyebrow">Projects</p>
-        <h1 id="projects-title">Projects in support, systems, cloud, and automation.</h1>
-        <p>A collection of labs and working builds from school, independent study, and real workflow problems.</p>
+        <h1 id="projects-title">Cloud, Linux, security, and automation projects.</h1>
+        <p>Hands-on environments built to practise administration, troubleshooting, recovery, and clear technical documentation.</p>
       </section>
 
       <section class="portfolio-capability-band" aria-label="Project categories">
         <div class="project-filters" role="group" aria-label="Filter projects by category" data-project-filters>
           <button type="button" class="filter-button is-selected" data-project-filter="all" aria-pressed="true">All</button>
           <button type="button" class="filter-button" data-project-filter="cloud" aria-pressed="false">Cloud</button>
+          <button type="button" class="filter-button" data-project-filter="linux" aria-pressed="false">Linux</button>
           <button type="button" class="filter-button" data-project-filter="systems" aria-pressed="false">Systems</button>
           <button type="button" class="filter-button" data-project-filter="security" aria-pressed="false">Security</button>
           <button type="button" class="filter-button" data-project-filter="software" aria-pressed="false">Software</button>
@@ -58,42 +59,46 @@
       <section class="section portfolio-featured" aria-labelledby="featured-title">
         <div class="section-heading section-heading-wide">
           <p class="eyebrow">Featured projects</p>
-          <h2 id="featured-title">What I've been working on.</h2>
-          <p class="section-subtitle">Three projects that best represent my current technical focus.</p>
+          <h2 id="featured-title">Current infrastructure work.</h2>
+          <p class="section-subtitle">The projects that best represent my cloud and systems administration focus.</p>
         </div>
 
         <div class="featured-project-grid" data-project-grid>
-          <article class="featured-project-card featured-project-primary" data-project-card data-categories="systems cloud">
+          <article class="featured-project-card featured-project-primary" data-project-card data-categories="systems cloud linux security">
             <div class="project-meta"><span>Support Lab</span><span>Linux / Web</span></div>
             <div class="featured-project-icon"><i data-lucide="server-cog"></i></div>
             <h3>Linux VPS and Web Service Support</h3>
-            <p>Set up and supported Ubuntu VPS environments over SSH, including services, logs, DNS, ports, firewall rules, and basic hardening.</p>
+            <p>Built a repeatable Ubuntu administration lab for provisioning, securing, monitoring, troubleshooting, and recovering internet-facing services.</p>
             <ul class="project-outcomes">
-              <li>Service configuration and uptime checks</li>
-              <li>Log review and failure isolation</li>
-              <li>DNS, port, and firewall troubleshooting</li>
+              <li>Provisioned Ubuntu VPS hosts and secured SSH key access</li>
+              <li>Managed users, groups, permissions, packages, and scheduled tasks</li>
+              <li>Configured Nginx and Apache services with systemd startup</li>
+              <li>Used journalctl and service logs to isolate startup and permission failures</li>
+              <li>Verified DNS, listening ports, HTTP responses, firewall rules, and reboot persistence</li>
+              <li>Documented recovery checks and repeatable administration steps</li>
             </ul>
             <div class="project-card-footer">
-              <ul class="tag-list"><li>Ubuntu</li><li>SSH</li><li>systemd</li><li>DNS</li><li>Firewall</li><li>Logs</li></ul>
+              <ul class="tag-list"><li>Ubuntu</li><li>SSH</li><li>systemd</li><li>Nginx</li><li>DNS</li><li>UFW</li><li>Logs</li></ul>
+              <a class="button button-secondary" href="/projects/linux-vps-support/"><i data-lucide="arrow-right"></i><span>View Linux Case Study</span></a>
             </div>
           </article>
 
-          <article class="featured-project-card" data-project-card data-categories="software cloud">
-            <div class="project-meta"><span>Deployment</span><span>Full Stack Web</span></div>
-            <div class="featured-project-icon"><i data-lucide="panels-top-left"></i></div>
-            <h3>Full Stack Web Application Deployment</h3>
-            <p>Built and deployed a web application with authentication, a PostgreSQL database, API integrations, validation, logging, and environment configuration.</p>
+          <article class="featured-project-card" data-project-card data-categories="systems cloud security">
+            <div class="project-meta"><span>Azure</span><span>Identity / Network</span></div>
+            <div class="featured-project-icon"><i data-lucide="network"></i></div>
+            <h3>Active Directory and Private Networking</h3>
+            <p>Configured users, groups, permissions, peered virtual networks, Bastion access, private DNS, and internal service connectivity.</p>
             <div class="project-card-footer">
-              <ul class="tag-list"><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li><li>Vercel</li></ul>
+              <ul class="tag-list"><li>AD DS</li><li>Azure</li><li>VNet Peering</li><li>Bastion</li><li>Private DNS</li></ul>
             </div>
           </article>
 
-          <article class="featured-project-card" data-project-card data-categories="software systems">
-            <div class="project-meta"><span>Support Tools</span><span>Python / API</span></div>
-            <div class="featured-project-icon"><i data-lucide="workflow"></i></div>
-            <h3>Python API and Support Automation Tools</h3>
-            <p>Built small Python tools for health checks, validation, structured logs, diagnostic reports, and repeatable support tasks.</p>
-            <div class="project-card-footer"><ul class="tag-list"><li>Python</li><li>FastAPI</li><li>REST APIs</li><li>SQLite</li><li>JSON</li><li>Git</li></ul></div>
+          <article class="featured-project-card" data-project-card data-categories="systems cloud security">
+            <div class="project-meta"><span>Azure</span><span>Recovery / Access</span></div>
+            <div class="featured-project-icon"><i data-lucide="shield-check"></i></div>
+            <h3>Secure Backup and Remote Access</h3>
+            <p>Set up VPN access, private file storage, identity controls, backup policies, and a tested restore process.</p>
+            <div class="project-card-footer"><ul class="tag-list"><li>VPN</li><li>Azure Files</li><li>Backup</li><li>Identity</li><li>Recovery</li></ul></div>
           </article>
         </div>
       </section>
@@ -113,11 +118,11 @@
             <ul class="tag-list"><li>Python</li><li>OCR</li><li>PDF</li><li>Logging</li></ul>
             <div class="lab-card-actions"><a class="text-link" href="/projects/document-email-automation/">View Details <i data-lucide="arrow-right"></i></a></div>
           </article>
-          <article class="lab-card" data-project-card data-categories="cloud systems">
-            <i data-lucide="network"></i><div class="project-meta"><span>Lab</span><span>Azure / Systems</span></div>
-            <h3>Active Directory and Private Networking</h3>
-            <p>Configured Active Directory across peered Azure networks with Bastion, private DNS, and internal web access, then tested domain connectivity and name resolution.</p>
-            <ul class="tag-list"><li>AD DS</li><li>VNet Peering</li><li>Bastion</li><li>Private DNS</li></ul>
+          <article class="lab-card" data-project-card data-categories="linux systems">
+            <i data-lucide="square-terminal"></i><div class="project-meta"><span>Lab</span><span>Ubuntu / Operations</span></div>
+            <h3>Linux Service Recovery and Log Analysis</h3>
+            <p>Created service failures, then used systemd status, journal logs, process checks, ports, permissions, and configuration validation to isolate and recover each service.</p>
+            <ul class="tag-list"><li>systemctl</li><li>journalctl</li><li>ss</li><li>curl</li><li>Logs</li></ul>
           </article>
           <article class="lab-card" data-project-card data-categories="cloud systems">
             <i data-lucide="cloud-cog"></i><div class="project-meta"><span>Lab</span><span>Azure / Cloud</span></div>
@@ -125,13 +130,13 @@
             <p>Deployed IIS across multiple Azure regions with load balancers, health probes, and geographic traffic routing.</p>
             <ul class="tag-list"><li>Traffic Manager</li><li>IIS</li><li>Load Balancer</li></ul>
           </article>
-          <article class="lab-card" data-project-card data-categories="cloud systems security">
-            <i data-lucide="shield-check"></i><div class="project-meta"><span>Lab</span><span>Azure / Recovery</span></div>
-            <h3>Secure Backup and Remote Access</h3>
-            <p>Set up point-to-site VPN access, private Azure file storage, identity controls, backups, and a tested restore process.</p>
-            <ul class="tag-list"><li>VPN</li><li>Azure Files</li><li>Backup</li><li>Identity</li></ul>
+          <article class="lab-card" data-project-card data-categories="linux systems security">
+            <i data-lucide="shield-check"></i><div class="project-meta"><span>Lab</span><span>Linux / Security</span></div>
+            <h3>Linux Access Control and Hardening</h3>
+            <p>Configured SSH keys, non-root administration, least-privilege permissions, UFW rules, package updates, and authentication log review.</p>
+            <ul class="tag-list"><li>SSH Keys</li><li>sudo</li><li>UFW</li><li>Permissions</li><li>auth.log</li></ul>
           </article>
-          <article class="lab-card" data-project-card data-categories="cloud systems">
+          <article class="lab-card" data-project-card data-categories="cloud systems linux">
             <i data-lucide="server-cog"></i><div class="project-meta"><span>Lab</span><span>AWS / Linux</span></div>
             <h3>Distributed Web Hosting</h3>
             <p>Ran Apache on distributed Linux hosts, synchronized content over SSH, and configured traffic distribution, DNS, HTTPS, and failover.</p>
@@ -155,7 +160,7 @@
             <p>Used controlled attack simulations, packet captures, alerts, and logs to build event timelines and document response steps.</p>
             <ul class="tag-list"><li>Wireshark</li><li>IDS</li><li>Forensics</li></ul>
           </article>
-          <article class="lab-card" data-project-card data-categories="software systems">
+          <article class="lab-card" data-project-card data-categories="software systems linux">
             <i data-lucide="square-terminal"></i><div class="project-meta"><span>Lab</span><span>Python / Automation</span></div>
             <h3>Systems Administration Tools</h3>
             <p>Wrote command-line tools for log parsing, host checks, resource monitoring, input validation, and technical reports.</p>
@@ -164,8 +169,8 @@
           <article class="lab-card" data-project-card data-categories="software">
             <i data-lucide="layout-template"></i><div class="project-meta"><span>Public Repository</span><span>Web</span></div>
             <h3>Personal Portfolio Website</h3>
-            <p>Built this responsive portfolio with semantic HTML, shared CSS, JavaScript, theme support, Three.js, metadata, and GitHub Pages.</p>
-            <ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Three.js</li></ul>
+            <p>Built this responsive portfolio with semantic HTML, shared CSS, JavaScript, theme support, accessible navigation, metadata, and GitHub Pages.</p>
+            <ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
             <div class="lab-card-actions"><a class="text-link" href="https://github.com/Hamid-sv/hamidsystems.com" target="_blank" rel="noreferrer">Repository <i data-lucide="external-link"></i></a></div>
           </article>
         </div>
@@ -173,17 +178,17 @@
 
       <section class="section portfolio-cta" aria-labelledby="projects-cta-title">
         <div class="contact-strip">
-          <div><p class="eyebrow">Contact</p><h2 id="projects-cta-title">Want to talk about one of these projects?</h2><p>Reach out about technical support roles, systems work, or automation.</p></div>
+          <div><p class="eyebrow">Contact</p><h2 id="projects-cta-title">Need someone who can own the environment?</h2><p>Reach out about cloud administration, Linux systems, remote operations, or automation.</p></div>
           <div class="contact-actions"><a class="button button-primary" href="/contact/"><i data-lucide="send"></i><span>Contact Me</span></a><a class="button button-secondary" href="https://www.linkedin.com/in/hamid-samadi/" target="_blank" rel="noreferrer"><i data-lucide="external-link"></i><span>LinkedIn</span></a></div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Hamid Samadi. Technical support and systems portfolio.</p>
+      <p>&copy; <span id="year"></span> Hamid Samadi. Cloud, systems, and automation portfolio.</p>
       <div><a href="/projects/">Projects</a><a href="/#skills">Skills</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
     </footer>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
-    <script src="/script.js" defer></script>
+    <script src="/script.js?v=20260825-cloud" defer></script>
   </body>
 </html>

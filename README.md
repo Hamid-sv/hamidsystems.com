@@ -1,6 +1,6 @@
 # Hamid Samadi Portfolio
 
-Personal technical portfolio for Hamid Samadi, focused on IT systems, cloud infrastructure, networking, automation, technical support, and practical software projects.
+Personal technical portfolio for Hamid Samadi, focused on cloud and systems administration, Linux, Windows, networking, remote operations, automation, and e-commerce systems.
 
 Live site: [hamidsystems.com](https://hamidsystems.com)
 
@@ -10,7 +10,7 @@ Live site: [hamidsystems.com](https://hamidsystems.com)
 - Shared CSS with light and dark themes
 - Plain JavaScript
 - Lucide icons
-- Lightweight Three.js homepage visualization
+- Lightweight image depth effect with reduced-motion support
 - GitHub Pages with a custom domain
 
 ## Primary Pages

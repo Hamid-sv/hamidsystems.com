@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101312" />
+    <meta name="description" content="A detailed Ubuntu VPS administration and service recovery lab by Hamid Samadi covering SSH, systemd, Nginx, logs, DNS, firewalls, monitoring, and validation." />
+    <link rel="canonical" href="https://hamidsystems.com/projects/linux-vps-support/" />
+    <meta property="og:title" content="Linux VPS Administration and Service Recovery | Hamid Samadi" />
+    <meta property="og:description" content="Ubuntu VPS provisioning, secure access, service management, monitoring, troubleshooting, and recovery validation." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://hamidsystems.com/projects/linux-vps-support/" />
+    <meta property="og:image" content="https://hamidsystems.com/assets/hero-support-workspace-v2.webp" />
+    <meta property="og:image:alt" content="Cloud and systems administration workspace" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Linux VPS Administration and Service Recovery | Hamid Samadi" />
+    <meta name="twitter:description" content="A hands-on Ubuntu administration lab covering secure access, services, logs, networking, hardening, and recovery." />
+    <meta name="twitter:image" content="https://hamidsystems.com/assets/hero-support-workspace-v2.webp" />
+    <title>Linux VPS Administration and Service Recovery | Hamid Samadi</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      document.documentElement.dataset.theme = localStorage.getItem("hamid-systems-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="/styles.css?v=20260825-cloud" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="Hamid Samadi home"><span class="brand-mark">HS</span><span>Hamid Samadi</span></a>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a><a href="/projects/" aria-current="page">Projects</a><a href="/#skills">Skills</a><a href="/about/">About</a><a href="/contact/">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-cta" href="/contact/">Connect</a>
+        <button class="icon-button menu-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><i data-lucide="menu"></i></button>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="true" title="Toggle theme"><i data-lucide="moon"></i></button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-hero project-detail-hero" aria-labelledby="project-title">
+        <p class="eyebrow">Administration Lab | Ubuntu Linux</p>
+        <h1 id="project-title">Linux VPS Administration and Service Recovery</h1>
+        <p>A hands-on environment for administering Ubuntu servers, supporting web services, diagnosing failures, and confirming that changes survive a restart.</p>
+      </section>
+
+      <section class="section case-study-overview" aria-labelledby="overview-title">
+        <div class="case-study-copy">
+          <p class="eyebrow">Project overview</p>
+          <h2 id="overview-title">A server should be understandable before it becomes urgent.</h2>
+          <p class="lead-small">
+            I built the lab around common administration work: secure remote access, user and permission management,
+            package updates, service configuration, log review, network checks, firewall rules, monitoring, and recovery.
+            Each task ends with a verification step and a short operating note.
+          </p>
+        </div>
+        <aside class="project-facts" aria-label="Project facts">
+          <div><span>Environment</span><strong>Ubuntu VPS and local Linux virtual machines</strong></div>
+          <div><span>Services</span><strong>Nginx, Apache, SSH, DNS, and scheduled tasks</strong></div>
+          <div><span>Administration</span><strong>Users, permissions, packages, processes, storage, and networking</strong></div>
+          <div><span>Validation</span><strong>Ports, logs, HTTP responses, firewall rules, and reboot persistence</strong></div>
+        </aside>
+      </section>
+
+      <section class="section case-study-problem" aria-labelledby="scope-title">
+        <div class="case-study-two-column">
+          <div>
+            <p class="eyebrow">Administration scope</p>
+            <h2 id="scope-title">Support the whole path, not only the running process.</h2>
+          </div>
+          <p>
+            A web service can fail because of configuration, permissions, DNS, a blocked port, exhausted storage, or a
+            dependency that did not start. The lab connects those layers so a failure can be investigated methodically
+            instead of restarting services and hoping for the best.
+          </p>
+        </div>
+      </section>
+
+      <section class="section workflow-section" aria-labelledby="workflow-title">
+        <div class="section-heading section-heading-wide">
+          <p class="eyebrow">Operating workflow</p>
+          <h2 id="workflow-title">A repeatable administration cycle.</h2>
+          <p class="section-subtitle">Every change moves through the same sequence: inspect, change, test, monitor, recover, and document.</p>
+        </div>
+        <div class="workflow-diagram" aria-label="Linux administration workflow">
+          <div class="workflow-step"><i data-lucide="scan-search"></i><span>Inspect</span></div><i class="workflow-arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+          <div class="workflow-step"><i data-lucide="settings-2"></i><span>Configure</span></div><i class="workflow-arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+          <div class="workflow-step"><i data-lucide="badge-check"></i><span>Validate</span></div><i class="workflow-arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+          <div class="workflow-step"><i data-lucide="chart-no-axes-combined"></i><span>Monitor</span></div><i class="workflow-arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+          <div class="workflow-step"><i data-lucide="rotate-ccw"></i><span>Recover</span></div><i class="workflow-arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+          <div class="workflow-step"><i data-lucide="notebook-pen"></i><span>Document</span></div>
+        </div>
+      </section>
+
+      <section class="section functionality-section" aria-labelledby="functionality-title">
+        <div class="section-heading section-heading-wide"><p class="eyebrow">What I administered</p><h2 id="functionality-title">Linux operations across the stack.</h2></div>
+        <div class="function-grid">
+          <article><i data-lucide="key-round"></i><h3>Secure access</h3><p>Configured SSH keys, non-root administration, sudo access, and authentication log review.</p></article>
+          <article><i data-lucide="users"></i><h3>Identity and permissions</h3><p>Managed users, groups, ownership, file modes, service accounts, and least-privilege access.</p></article>
+          <article><i data-lucide="server-cog"></i><h3>Services</h3><p>Installed and configured Nginx and Apache, managed systemd units, and tested startup after reboot.</p></article>
+          <article><i data-lucide="network"></i><h3>Network checks</h3><p>Verified DNS, routes, listening ports, HTTP responses, firewall rules, and remote connectivity.</p></article>
+          <article><i data-lucide="activity"></i><h3>Health and capacity</h3><p>Checked processes, CPU, memory, storage, package state, uptime, and scheduled jobs.</p></article>
+          <article><i data-lucide="logs"></i><h3>Logs and recovery</h3><p>Used journal and application logs to isolate failures, roll back changes, and confirm recovery.</p></article>
+        </div>
+      </section>
+
+      <section class="section implementation-band" aria-labelledby="toolkit-title">
+        <div>
+          <p class="eyebrow">Command-line toolkit</p>
+          <h2 id="toolkit-title">Evidence before action.</h2>
+          <p>I use service status, logs, ports, resource checks, and direct requests to understand the current state before changing configuration.</p>
+        </div>
+        <ul class="tag-list implementation-tags"><li>systemctl</li><li>journalctl</li><li>ss</li><li>curl</li><li>dig</li><li>df / du</li><li>ps / top</li><li>chmod / chown</li><li>ufw</li></ul>
+      </section>
+
+      <section class="section supportability-section" aria-labelledby="validation-title">
+        <div class="section-heading section-heading-wide"><p class="eyebrow">Validation</p><h2 id="validation-title">How I know the service is actually healthy.</h2></div>
+        <div class="supportability-list">
+          <div><i data-lucide="circle-check"></i><span><strong>Service state</strong> confirms the expected unit is active and enabled.</span></div>
+          <div><i data-lucide="radio-tower"></i><span><strong>Listening ports</strong> confirm the process is bound to the intended interface.</span></div>
+          <div><i data-lucide="globe"></i><span><strong>DNS and HTTP checks</strong> confirm the request reaches the service and returns the expected response.</span></div>
+          <div><i data-lucide="shield-check"></i><span><strong>Firewall review</strong> confirms only required access is exposed.</span></div>
+          <div><i data-lucide="scroll-text"></i><span><strong>Log review</strong> confirms there are no hidden startup or permission errors.</span></div>
+          <div><i data-lucide="power"></i><span><strong>Restart testing</strong> confirms configuration and services persist after reboot.</span></div>
+        </div>
+      </section>
+
+      <section class="section lessons-section" aria-labelledby="lessons-title">
+        <div class="section-heading"><p class="eyebrow">Administration principles</p><h2 id="lessons-title">What the lab demonstrates.</h2></div>
+        <div class="summary-grid">
+          <article class="summary-item"><span class="item-number">01</span><h3>Start with the current state</h3><p>Logs, service status, ports, and resource use narrow the problem before a change is made.</p></article>
+          <article class="summary-item"><span class="item-number">02</span><h3>Change one layer at a time</h3><p>Small, controlled changes make rollback easier and keep the cause visible.</p></article>
+          <article class="summary-item"><span class="item-number">03</span><h3>Verify from the user side</h3><p>A running process is not enough. DNS, connectivity, response, and restart checks complete the test.</p></article>
+        </div>
+      </section>
+
+      <section class="section case-study-cta" aria-labelledby="case-cta-title">
+        <a class="text-link back-link" href="/projects/"><i data-lucide="arrow-left"></i> Back to all projects</a>
+        <div class="contact-strip"><div><p class="eyebrow">Contact</p><h2 id="case-cta-title">Looking for a cloud or Linux administrator?</h2><p>I'm open to remote cloud administration, systems operations, infrastructure support, and automation roles.</p></div><a class="button button-primary" href="/contact/"><i data-lucide="send"></i><span>Contact Me</span></a></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Hamid Samadi. Cloud, systems, and automation portfolio.</p>
+      <div><a href="/projects/">Projects</a><a href="/#skills">Skills</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+    </footer>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="/script.js?v=20260825-cloud" defer></script>
+  </body>
+</html>
