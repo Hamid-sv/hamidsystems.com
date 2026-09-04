@@ -11,43 +11,43 @@
 :root {
   color-scheme: light;
 
-  --ground: #faf9f5;
-  --raise: #ffffff;
-  --ink: #16130e;
-  --ink-2: #55514a;
-  --ink-3: #736d63;
-  --rule: rgba(22, 19, 14, 0.16);
-  --rule-soft: rgba(22, 19, 14, 0.09);
-  --rule-strong: rgba(22, 19, 14, 0.42);
-  --accent: #9a5b0d;
-  --accent-hover: #7d490a;
+  --ground: #ffffff;
+  --raise: #f4f5f7;
+  --ink: #0b0c0e;
+  --ink-2: #4a4e57;
+  --ink-3: #6b7079;
+  --rule: rgba(11, 12, 14, 0.16);
+  --rule-soft: rgba(11, 12, 14, 0.075);
+  --rule-strong: rgba(11, 12, 14, 0.44);
+  --accent: #1f3fd4;
+  --accent-hover: #1832ab;
   --accent-ink: #ffffff;
-  --selection: rgba(154, 91, 13, 0.18);
+  --selection: rgba(31, 63, 212, 0.16);
 
   --sans: "Archivo", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
   --max: 1240px;
   --gutter: clamp(20px, 5vw, 56px);
-  --section-y: clamp(56px, 8vw, 116px);
+  --section-y: clamp(48px, 6.2vw, 92px);
   --radius: 2px;
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
 
-  --ground: #0e1211;
-  --raise: #141a18;
-  --ink: #eef1ed;
-  --ink-2: #a6afaa;
-  --ink-3: #79837e;
-  --rule: rgba(238, 241, 237, 0.16);
-  --rule-soft: rgba(238, 241, 237, 0.08);
-  --rule-strong: rgba(238, 241, 237, 0.44);
-  --accent: #e3a850;
-  --accent-hover: #f0bc70;
-  --accent-ink: #0e1211;
-  --selection: rgba(227, 168, 80, 0.24);
+  --ground: #0b0c0e;
+  --raise: #131519;
+  --ink: #f2f3f5;
+  --ink-2: #a3a9b4;
+  --ink-3: #828892;
+  --rule: rgba(242, 243, 245, 0.17);
+  --rule-soft: rgba(242, 243, 245, 0.08);
+  --rule-strong: rgba(242, 243, 245, 0.46);
+  --accent: #7c9bff;
+  --accent-hover: #9db3ff;
+  --accent-ink: #0b0c0e;
+  --selection: rgba(124, 155, 255, 0.26);
 }
 
 /* --------------------------------------------------------------------------
@@ -267,7 +267,7 @@ main > section {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr);
   gap: clamp(16px, 3vw, 48px);
   align-items: start;
-  margin-bottom: clamp(32px, 5vw, 64px);
+  margin-bottom: clamp(26px, 3.6vw, 48px);
 }
 
 .resume-section-heading > .eyebrow,
@@ -454,14 +454,15 @@ main > section {
 }
 
 .button-primary {
-  color: var(--accent-ink);
-  background: var(--accent);
-  border-color: var(--accent);
+  color: var(--ground);
+  background: var(--ink);
+  border-color: var(--ink);
 }
 
 .button-primary:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
+  color: var(--accent-ink);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .button-secondary {
@@ -555,7 +556,7 @@ main > section > i {
 .hero {
   width: min(100% - (var(--gutter) * 2), var(--max));
   margin-inline: auto;
-  padding-block: clamp(52px, 9vw, 104px) clamp(40px, 6vw, 76px);
+  padding-block: clamp(44px, 7vw, 84px) clamp(34px, 5vw, 62px);
 }
 
 .hero-inner {
