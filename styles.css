@@ -2662,6 +2662,10 @@ h3 {
   gap: clamp(36px, 7vw, 90px);
 }
 
+.about-page-hero-single {
+  grid-template-columns: minmax(0, 860px);
+}
+
 .about-headshot {
   width: min(100%, 330px);
   aspect-ratio: 1;
