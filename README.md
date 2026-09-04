@@ -1,6 +1,6 @@
 # Hamid Samadi Portfolio
 
-Personal technical portfolio for Hamid Samadi, focused on cloud and systems administration, Linux, Windows, networking, remote operations, automation, and e-commerce systems.
+Personal technical portfolio for Hamid Samadi, focused on technical customer success and support: SaaS and application support, customer issue ownership, Freshworks, Shopify, CRM, and the systems and networking troubleshooting behind it.
 
 Live site: [hamidsystems.com](https://hamidsystems.com)
 
@@ -17,6 +17,7 @@ Live site: [hamidsystems.com](https://hamidsystems.com)
 
 - `/` - homepage, featured work, skills, process, and contact invitation
 - `/projects/` - project overview and category filters
+- `/projects/linux-vps-support/` - detailed Linux administration and recovery case study
 - `/projects/document-email-automation/` - detailed private-project case study
 - `/about/` - professional focus, education, background, and working approach
 - `/contact/` - email, LinkedIn, GitHub, and location
